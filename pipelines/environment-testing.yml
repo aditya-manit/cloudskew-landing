@@ -15,6 +15,5 @@ stages:
   - template: templates/stages.yml
     parameters:
       azureSubscription: $(testing-service-connection)
-      buildConfiguration: testing
       environment: testing
       storageAccountName: $(testing-storageaccount-name-cloudskew-landing)

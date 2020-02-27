@@ -1,0 +1,18 @@
+# Deploys cloudskew-landing to production environment (blob storage accessed via cdn).
+
+pool:
+  vmImage: ubuntu-latest
+
+trigger: none
+
+name: cloudskew-landing.production
+
+variables:
+  - group: cloudskew-variable-group
+
+stages:
+  - template: templates/stages.yml
+    parameters:
+      azureSubscription: $(production-service-connection)
+      environment: production
+      storageAccountName: $(production-storageaccount-name-cloudskew-landing)

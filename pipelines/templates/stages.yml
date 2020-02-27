@@ -15,8 +15,9 @@ stages:
           - script: yarn install
             displayName: yarn install
           # install vuepress globally
-          - script: yarn global add vuepress
-            displayName: yarn global add vuepress
+          # note: sudo needed, else attempts to run vuepress will encounter 'command not found'
+          - script: sudo yarn global add vuepress
+            displayName: sudo yarn global add vuepress
           # Generate the build
           - script: vuepress build -d ./dist
             displayName: vuepress build -d ./dist

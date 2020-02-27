@@ -19,8 +19,8 @@ stages:
           - script: sudo yarn global add vuepress
             displayName: sudo yarn global add vuepress
           # Generate the build
-          - script: vuepress build -d ./dist
-            displayName: vuepress build -d ./dist
+          - script: sudo vuepress build -d ./dist
+            displayName: sudo vuepress build -d ./dist
           # Publish the pipeline artifact
           - task: PublishPipelineArtifact@1
             displayName: publish artifact

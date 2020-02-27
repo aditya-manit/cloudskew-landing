@@ -2,6 +2,7 @@
 
 # compiled output
 .vuepress/dist
+dist
 
 # dependencies
 /node_modules

@@ -1,21 +1,20 @@
 # Deploys cloudskew-landing to testing environment (blob storage accessed via cdn).
 
 pool:
-    vmImage: ubuntu-latest
-  
-  trigger:
-    - master
-  
-  name: cloudskew-landing.testing
-  
-  variables:
-    - group: cloudskew-variable-group
-  
-  stages:
-    - template: templates/stages.yml
-      parameters:
-        azureSubscription: $(testing-service-connection)
-        buildConfiguration: testing
-        environment: testing
-        storageAccountName: $(testing-storageaccount-name-cloudskew-landing)
-  
+  vmImage: ubuntu-latest
+
+trigger:
+  - master
+
+name: cloudskew-landing.testing
+
+variables:
+  - group: cloudskew-variable-group
+
+stages:
+  - template: templates/stages.yml
+    parameters:
+      azureSubscription: $(testing-service-connection)
+      buildConfiguration: testing
+      environment: testing
+      storageAccountName: $(testing-storageaccount-name-cloudskew-landing)

@@ -1,65 +1,64 @@
 parameters:
-    # default values for any parameters that aren't specified.
-    # please keep this list alphabetically sorted.
-    azureSubscription: ''
-    environment: ''
-    storageAccountName: ''
+  # default values for any parameters that aren't specified.
+  # please keep this list alphabetically sorted.
+  azureSubscription: ''
+  environment: ''
+  storageAccountName: ''
+
+stages:
+
+  - stage: build
+    jobs:
+      - job: build
+        steps:
+          # Install all the prerequisites
+          - script: yarn install
+            displayName: yarn install
+          # Generate the build
+          - script: vuepress build -d ./dist
+            displayName: vuepress build -d ./dist
+          # Publish the pipeline artifact
+          - task: PublishPipelineArtifact@1
+            displayName: publish artifact
+            inputs:
+              artifact: dist
+              targetPath: ./dist
+
+  - stage: test
+    jobs:
+      - job: test
   
-  stages:
-  
-    - stage: build
-      jobs:
-        - job: build
-          steps:
-            # Install all the prerequisites
-            - script: yarn install
-              displayName: yarn install
-            # Generate the build
-            - script: vuepress build -d ./dist
-              displayName: vuepress build -d ./dist
-            # Publish the pipeline artifact
-            - task: PublishPipelineArtifact@1
-              displayName: publish artifact
-              inputs:
-                artifact: dist
-                targetPath: ./dist
-  
-    - stage: test
-      jobs:
-        - job: test
-    
-    - stage: deploy
-      # don't execute this stage if triggered via pull-request.
-      condition: and(succeeded(), ne(variables['build.reason'], 'PullRequest'))
-      displayName: deploy to ${{parameters.environment}} environment
-      jobs:
-        - deployment: deploy
-          displayName: deploy to ${{parameters.environment}} environment
-          environment: ${{parameters.environment}}
-          strategy:
-            runOnce:
-              deploy:
-                steps:
-                  # Let's now download the artifact we published earlier.
-                  # Note: Artifacts are the only mechanism via which a stage can consume the 
-                  # output of an earlier stage
-                  - task: DownloadPipelineArtifact@2
-                    displayName: download artifact
-                    inputs:
-                      artifactName: dist
-                      targetPath: ./dist
-                  # We'd have preferred to use the Azure File Copy task (- task: AzureFileCopy@3). 
-                  # However that task does not work on non-windows environment:
-                  # https://github.com/Microsoft/azure-pipelines-tasks/issues/8920
-                  # Some possible workarounds are to
-                  # 1: directly run the AZ CLI command to upload to blob storage (- script: az cli ...).
-                  # 2: use the AZ CLI built-in task (- task: AzureCLI@2).
-                  # 3: use the azcopy utility (- script: azcopy ...).
-                  # Let's go with #2 since there is direct integration with the service principal connection.
-                  - task: AzureCLI@1
-                    displayName: deploy to azure storage
-                    inputs:
-                      azureSubscription: ${{parameters.azureSubscription}}
-                      scriptLocation: inlineScript
-                      inlineScript: az storage blob sync --account-name ${{parameters.storageAccountName}} -c '$web' -s './dist'
-  
+  - stage: deploy
+    # don't execute this stage if triggered via pull-request.
+    condition: and(succeeded(), ne(variables['build.reason'], 'PullRequest'))
+    displayName: deploy to ${{parameters.environment}} environment
+    jobs:
+      - deployment: deploy
+        displayName: deploy to ${{parameters.environment}} environment
+        environment: ${{parameters.environment}}
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                # Let's now download the artifact we published earlier.
+                # Note: Artifacts are the only mechanism via which a stage can consume the 
+                # output of an earlier stage
+                - task: DownloadPipelineArtifact@2
+                  displayName: download artifact
+                  inputs:
+                    artifactName: dist
+                    targetPath: ./dist
+                # We'd have preferred to use the Azure File Copy task (- task: AzureFileCopy@3). 
+                # However that task does not work on non-windows environment:
+                # https://github.com/Microsoft/azure-pipelines-tasks/issues/8920
+                # Some possible workarounds are to
+                # 1: directly run the AZ CLI command to upload to blob storage (- script: az cli ...).
+                # 2: use the AZ CLI built-in task (- task: AzureCLI@2).
+                # 3: use the azcopy utility (- script: azcopy ...).
+                # Let's go with #2 since there is direct integration with the service principal connection.
+                - task: AzureCLI@1
+                  displayName: deploy to azure storage
+                  inputs:
+                    azureSubscription: ${{parameters.azureSubscription}}
+                    scriptLocation: inlineScript
+                    inlineScript: az storage blob sync --account-name ${{parameters.storageAccountName}} -c '$web' -s './dist'

@@ -14,6 +14,9 @@ stages:
           # Install all the prerequisites
           - script: yarn install
             displayName: yarn install
+          # install vuepress globally
+          - script: yarn global add vuepress
+            displayName: yarn global add vuepress
           # Generate the build
           - script: vuepress build -d ./dist
             displayName: vuepress build -d ./dist

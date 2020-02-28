@@ -1,0 +1,34 @@
+# Features
+
+## Available features
+
+:heavy_check_mark: The following features are available in CloudSkew right now (see [release notes](https://github.com/cloudskew/cloudskew/releases)):
+
+* Icons for Azure, AWS, GCP, CNCF and more are preloaded in the app.
+* Create a new diagram from a template (or simply a new empty diagram).
+* Print a diagram and/or export it to `.png`, `.jpg` or `.bmp` formats.
+* Lock an entire diagram or just individual symbols (locking make things read-only, preventing them from being edited or deleted).
+* Adjust visual properties of any symbol via the `visual properties` window.
+* Diagrams are auto-saved.
+* Load icons/symbols from symbol palette onto diagram by single-clicking on it.
+* Search for an icon by typing in the icon name (or a synonym or category) in the symbol search box.
+* Undo & redo actions.
+* Access frequent commands via context menu (cut, copy, paste, delete etc).
+* Adjust z-index of any symbol on the diagram (via context menu).
+* Zoom in & out of a diagram.
+* Import custom images into a diagram (.png, .jpg formats only, file size must be < 512 KB).
+* Any selected symbol's information is displayed via tooltip on hover.
+* Attach text labels to any symbol. Labels can be re-positioned, re-sized, rotated and styled (via properties window).
+* Optionally enable/disable entire icon families (via preferences/settings bar).  
+
+## Planned features
+
+:calendar: In the near team, the following features are on the roadmap (see [planned milestones](https://github.com/cloudskew/cloudskew/milestones)):
+
+* View & adjust z-index of diagram symbols via a separate control.
+* Group multiple symbols together.
+* Save checkpoints/snapshots (along with ability to restore-from/rollback-to a previous checkpoint).  
+* Keyboard shortcuts for commonly performed actions.
+* More icons, shapes and diagram templates. You can always request specific ones [here](https://github.com/cloudskew/cloudskew/issues/new/choose). You can view existing open requests [here](https://github.com/cloudskew/cloudskew/issues?q=is%3Aopen+is%3Aissue+label%3Aicon-request).
+
+The relative priorities of these planned features will depend on the volume of user requests received. If you have a feature request that's not listed up here, you can file a new one [here](https://github.com/cloudskew/cloudskew/issues/new/choose).

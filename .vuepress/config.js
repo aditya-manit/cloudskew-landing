@@ -1,6 +1,12 @@
 module.exports = {
   title: 'CloudSkew',
   description: 'Free online diagram editor for creating cloud architecture diagrams',
+  head: [
+    ['link', { rel: 'icon', href: `/assets/cloudskew-logo.png` }],
+  ],
+  plugins: [
+    '@vuepress/back-to-top',
+  ],
   themeConfig: {
     // logo: '/assets/cloudskew-logo.png',
 

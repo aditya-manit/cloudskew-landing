@@ -42,7 +42,7 @@ module.exports = {
           {
             text: 'Contact Us',
             items: [
-              // { text: 'Email', link: 'mailto:mithun@cloudskew.com' },
+              { text: 'Email', link: 'mailto:support@cloudskew.com' },
               { text: 'Github', link: 'https://github.com/cloudskew/cloudskew' },
               { text: 'Twitter', link: 'https://twitter.com/mithunshanbhag' },
             ],

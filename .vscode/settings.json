@@ -3,9 +3,11 @@
         "aspnet",
         "cloudskew",
         "cncf",
+        "keda",
         "kubernetes",
         "microservices",
         "mortems",
+        "petshop",
         "vuepress"
     ]
 }

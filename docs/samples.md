@@ -13,7 +13,7 @@
 **Microservices on Azure Kubernetes Service** [(see it live)](https://app.cloudskew.com/viewer/eb335650-d335-463b-bde5-b94af25d042c)
 ![microservices on aks](https://assets.cloudskew.com/assets/samples/microservices-on-aks.png)
 
-PetShop on Azure Kubernetes Service using Azure Functions and KEDA [(see it live)](https://app.cloudskew.com/viewer/f4a29170-ca7a-4bae-991f-4ea678e14718)
+**PetShop on Azure Kubernetes Service using Azure Functions & KEDA** [(see it live)](https://app.cloudskew.com/viewer/f4a29170-ca7a-4bae-991f-4ea678e14718)
 ![petshop on aks using azure functions and keda](https://assets.cloudskew.com/assets/samples/petshop-on-aks-with-azfunc-keda.png)
 
 ## Kubernetes / CNCF

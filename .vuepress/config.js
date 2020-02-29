@@ -6,6 +6,7 @@ module.exports = {
   ],
   plugins: [
     '@vuepress/back-to-top',
+    '@vuepress/medium-zoom',
   ],
   themeConfig: {
     // logo: '/assets/cloudskew-logo.png',
@@ -16,6 +17,7 @@ module.exports = {
 
     nav: [
       // { text: 'Blog', link: '/blog/' },
+      { text: 'Samples', link: '/docs/samples' },
       { text: 'Docs', link: '/docs/frequently-asked-questions' },
       { text: 'Login / Signup', link: 'https://app.cloudskew.com' },
       // { text: 'Pricing', link: '' },
@@ -79,6 +81,7 @@ function getDocsSidebar() {
       children: [ // please keep this list alphabetically sorted
         'features',
         'frequently-asked-questions',
+        'samples',
       ],
     },
   ]

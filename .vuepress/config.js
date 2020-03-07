@@ -7,6 +7,10 @@ module.exports = {
   plugins: [
     '@vuepress/back-to-top',
     '@vuepress/medium-zoom',
+    '@vuepress/google-analytics',
+    {
+      'ga': 'UA-96116826-3' // google analytics tracking id
+    },
   ],
   themeConfig: {
     // logo: '/assets/cloudskew-logo.png',

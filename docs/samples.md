@@ -19,6 +19,11 @@
 **PetShop on Azure Kubernetes Service using Azure Functions & KEDA** [(see it live)](https://app.cloudskew.com/viewer/f4a29170-ca7a-4bae-991f-4ea678e14718)
 ![petshop on aks using azure functions and keda](https://assets.cloudskew.com/assets/samples/petshop-on-aks-with-azfunc-keda.png)
 
+## GCP
+
+**Real-time retail inventory** [(see it live)](https://app.cloudskew.com/viewer/af9976e8-a302-4451-b0e2-d048a76424fa)
+![gcp realtime retail inventory](https://assets.cloudskew.com/assets/samples/gcp-realtime-retail-inventory.png)
+
 ## Kubernetes / CNCF
 
 **Kubernetes resource map** [(see it live)](https://app.cloudskew.com/viewer/0610ccbc-c6b6-4167-9fa9-2903a513da08)

@@ -1,6 +1,6 @@
 module.exports = {
   title: 'CloudSkew',
-  description: 'Free online diagram editor for creating cloud architecture diagrams',
+  description: 'Draw AWS, Azure, GCP diagrams for free',
   head: [
     ['link', { rel: 'icon', href: `/assets/cloudskew-logo.png` }],
   ],
@@ -23,6 +23,8 @@ module.exports = {
       // { text: 'Blog', link: '/blog/' },
       { text: 'Samples', link: '/docs/samples' },
       { text: 'Docs', link: '/docs/frequently-asked-questions' },
+      // { text: 'Articles', link: '/articles/cross-cutting-concerns-for-cloud-architectures' },
+      // { text: 'Case Studies', link: '/case-studies/frequently-asked-questions' },
       { text: 'Login / Signup', link: 'https://app.cloudskew.com' },
       // { text: 'Pricing', link: '' },
       { text: 'Status', link: '/status/current-status' },
@@ -57,6 +59,7 @@ module.exports = {
 
     sidebar: {
       '/about/': getAboutSidebar(),
+      '/articles/': getArticlesSidebar(),
       '/docs/': getDocsSidebar(),
       '/status/': getStatusSidebar(),
     },
@@ -72,6 +75,18 @@ function getAboutSidebar() {
       children: [ // please keep this list alphabetically sorted
         'attribution',
         'privacy-policy',
+      ],
+    },
+  ]
+}
+
+function getArticlesSidebar() {
+  return [
+    {
+      title: 'Articles',
+      collapsable: false,
+      children: [ // please keep this list alphabetically sorted
+        'cross-cutting-concerns-for-cloud-architectures',
       ],
     },
   ]

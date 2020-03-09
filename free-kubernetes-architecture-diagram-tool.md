@@ -19,6 +19,7 @@ features:
 - title: Share, export, print
   details: You can share diagrams via links. Or simply export them to PNG or JPG formats. Or just print them.
 footer: 'Copyright: 2019-present - Skewed Ventures Private Limited'
+metaTitle: Free Kubernetes Architecture Diagram Tool | CloudSkew
 meta:
 - name: 'og:image'
   content: 'https://assets.cloudskew.com/assets/misc/landing-page-hero-k8s.png'

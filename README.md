@@ -2,7 +2,7 @@
 home: true
 heroImage: 'https://assets.cloudskew.com/assets/misc/landing-page-hero-3.png'
 heroText: 
-tagline: Create cloud architecture diagrams for free!
+tagline: Draw cloud architecture diagrams for free!
 actionText: Get Started
 actionLink: 'https://app.cloudskew.com'
 features:
@@ -19,6 +19,7 @@ features:
 - title: Share, export, print
   details: You can share diagrams via links. Or simply export them to PNG or JPG formats. Or just print them.
 footer: 'Copyright: 2019-present - Skewed Ventures Private Limited'
+metaTitle: Free AWS, Azure, GCP, Kubernetes Architecture Diagram Tool | CloudSkew
 meta:
 - name: 'og:image'
   content: 'https://assets.cloudskew.com/assets/misc/landing-page-hero-3.png'

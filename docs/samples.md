@@ -1,3 +1,8 @@
+---
+meta:
+- name: 'og:image'
+  content: 'https://assets.cloudskew.com/assets/misc/landing-page-hero-k8s.png'
+---
 # Samples
 
 ## AWS

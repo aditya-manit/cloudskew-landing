@@ -4,14 +4,21 @@ module.exports = {
   head: [
     ['link', { rel: 'icon', href: `/assets/cloudskew-logo.png` }],
   ],
-  plugins: [
-    '@vuepress/back-to-top',
-    '@vuepress/medium-zoom',
-    '@vuepress/google-analytics',
-    {
+  plugins: {
+    '@vuepress/back-to-top': {
+    },
+    '@vuepress/medium-zoom': {
+    },
+    '@vuepress/google-analytics': {
       'ga': 'UA-96116826-3' // google analytics tracking id
     },
-  ],
+    'sitemap': {
+      'hostname': 'https://www.cloudskew.com',
+      'exclude': [
+        '/articles/cross-cutting-concerns-for-cloud-architectures.html', // @todo: temporary, remove later
+      ],
+    },
+  },
   themeConfig: {
     // logo: '/assets/cloudskew-logo.png',
 

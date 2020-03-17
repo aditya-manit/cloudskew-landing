@@ -1,6 +1,8 @@
 # Professional Services
 
-CloudSkew additionally offers professional services centered around Microsoft Azure:
+![consulting services](https://assets.cloudskew.com/assets/misc/professional-services-2.jpg)
+
+CloudSkew additionally offers consulting & professional services centered around Microsoft Azure:
 
 * Need an architecture proposal created for tech presales?
 
@@ -11,3 +13,7 @@ CloudSkew additionally offers professional services centered around Microsoft Az
 * Need a training workshop or a hands-on lab?
 
 Please get in touch with us: [services@cloudskew.com](mailto:services@cloudskew.com)
+
+![consulting services](https://assets.cloudskew.com/assets/misc/professional-services-0.jpg)
+
+![consulting services](https://assets.cloudskew.com/assets/misc/professional-services-1.jpg)

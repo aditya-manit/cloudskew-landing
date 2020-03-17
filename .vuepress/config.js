@@ -33,8 +33,8 @@ module.exports = {
       // { text: 'Articles', link: '/articles/cross-cutting-concerns-for-cloud-architectures' },
       // { text: 'Case Studies', link: '/case-studies/frequently-asked-questions' },
       { text: 'Login / Signup', link: 'https://app.cloudskew.com' },
-      { text: 'Services', link: '/about/professional-services' },
       { text: 'Status', link: '/status/current-status' },
+      { text: 'Services', link: '/about/professional-services' },
       {
         text: 'About',
         ariaLabel: 'About menu',

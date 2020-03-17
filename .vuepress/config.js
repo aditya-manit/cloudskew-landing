@@ -56,8 +56,9 @@ module.exports = {
             text: 'Contact Us',
             items: [
               { text: 'Email', link: 'mailto:support@cloudskew.com' },
-              { text: 'Github', link: 'https://github.com/cloudskew/cloudskew' },
+              { text: 'GitHub', link: 'https://github.com/cloudskew/cloudskew' },
               { text: 'Twitter', link: 'https://twitter.com/mithunshanbhag' },
+              { text: 'YouTube', link: 'https://www.youtube.com/channel/UCc4Y5F4UcCl-KoNskDqdW6w' },
             ],
           },
         ],

@@ -33,7 +33,7 @@ module.exports = {
       // { text: 'Articles', link: '/articles/cross-cutting-concerns-for-cloud-architectures' },
       // { text: 'Case Studies', link: '/case-studies/frequently-asked-questions' },
       { text: 'Login / Signup', link: 'https://app.cloudskew.com' },
-      // { text: 'Pricing', link: '' },
+      { text: 'Services', link: '/about/professional-services' },
       { text: 'Status', link: '/status/current-status' },
       {
         text: 'About',
@@ -44,6 +44,7 @@ module.exports = {
             items: [
               { text: 'Attribution', link: '/about/attribution' },
               { text: 'Privacy Policy', link: '/about/privacy-policy' },
+              { text: 'Professional Services', link: '/about/professional-services' },
             ],
           },
           {
@@ -83,6 +84,7 @@ function getAboutSidebar() {
       children: [ // please keep this list alphabetically sorted
         'attribution',
         'privacy-policy',
+        'professional-services',
       ],
     },
   ]

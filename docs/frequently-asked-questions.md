@@ -2,9 +2,9 @@
 
 **Why can't the diagram canvas be resized?**
 
-The diagram size is restricted to 900px x 500px (landscape mode). While it's possible to zoom in/out, it's not possible to change a diagram's height, width & orientation.
+Currently CloudSkew supports multi-page diagrams on an infinitely large canvas. However each page is of A4 size (210 x 297 millimeters or 8.27 x 11.69 inches) and in landscape mode.
 
-Custom diagram sizes might be enabled at a future point as a premium/paid feature.
+Custom diagram sizes and orientations will be enabled in a future release.
 
 **Any plans to auto-generate diagrams from existing infrastructure?**
 

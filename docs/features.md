@@ -6,6 +6,7 @@
 
 * Icons for Azure, AWS, GCP, CNCF and more are preloaded in the app.
 * Create a new diagram from a template (or simply a new empty diagram).
+* Draw arbitrarily large (multi-page) diagrams on an infinite canvas.
 * Print a diagram and/or export it to `.png`, `.jpg` or `.bmp` formats.
 * Lock an entire diagram or just individual symbols (locking make things read-only, preventing them from being edited or deleted).
 * Adjust visual properties of any symbol via the `visual properties` window.
@@ -19,7 +20,7 @@
 * Import custom images into a diagram (.png, .jpg formats only, file size must be < 512 KB).
 * Any selected symbol's information is displayed via tooltip on hover.
 * Attach text labels to any symbol. Labels can be re-positioned, re-sized, rotated and styled (via properties window).
-* Optionally enable/disable entire icon families (via preferences/settings bar).  
+* Optionally enable/disable entire icon families (via preferences/settings bar).
 
 ## Planned features
 

@@ -5,6 +5,11 @@ meta:
 ---
 # Samples
 
+## Alibaba Cloud
+
+**Video on demand (VoD) solution for E-Learning** [(see it live)](https://app.cloudskew.com/viewer/4c67e28b-5991-48e1-ab3c-eb9ace54292e)
+![Video on demand (vod) solution for e-learning](https://assets.cloudskew.com/assets/samples/alibaba-elearning-vod-solution.png)
+
 ## AWS
 
 **Real-time analytics pipeline** [(see it live)](https://app.cloudskew.com/viewer/eae9d99c-7103-41db-8407-9967e4fddb07)

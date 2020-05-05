@@ -2,6 +2,7 @@
 
 A big heartfelt thanks to the icon creators for all their hard work! :clap:
 
+* [Alibaba Cloud icons](https://www.alibabacloud.com/help/doc-detail/67830.htm) ([SVG version](https://drive.google.com/open?id=1DiRK1ydTzxFhNCP8Ks0A70NYkQWYjvfa) provided by [@claytonchew](https://github.com/claytonchew))
 * [Azure icons](https://www.microsoft.com/en-in/download/details.aspx?id=41937)
 * [Auth0 icons](https://identicons.dev/) ([github](https://github.com/auth0/identicons))
 * [AWS icons](https://aws.amazon.com/architecture/icons/)

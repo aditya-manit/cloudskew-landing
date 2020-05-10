@@ -8,9 +8,11 @@
 * Create a new diagram from a template (or simply a new empty diagram).
 * Draw arbitrarily large (multi-page) diagrams on an infinite canvas.
 * Print a diagram and/or export it to `.png`, `.jpg` or `.bmp` formats.
+* Save a diagram as a reusable template.
 * Lock an entire diagram or just individual symbols (locking make things read-only, preventing them from being edited or deleted).
 * Adjust visual properties of any symbol via the `visual properties` window.
 * Diagrams are auto-saved.
+* Group multiple symbols together.
 * Load icons/symbols from symbol palette onto diagram by single-clicking on it.
 * Search for an icon by typing in the icon name (or a synonym or category) in the symbol search box.
 * Undo & redo actions.
@@ -27,7 +29,6 @@
 :calendar: In the near team, the following features are on the roadmap (see [planned milestones](https://github.com/cloudskew/cloudskew/milestones)):
 
 * View & adjust z-index of diagram symbols via a separate control.
-* Group multiple symbols together.
 * Save checkpoints/snapshots (along with ability to restore-from/rollback-to a previous checkpoint).  
 * Keyboard shortcuts for commonly performed actions.
 * More icons, shapes and diagram templates. You can always request specific ones [here](https://github.com/cloudskew/cloudskew/issues/new/choose). You can view existing open requests [here](https://github.com/cloudskew/cloudskew/issues?q=is%3Aopen+is%3Aissue+label%3Aicon-request).

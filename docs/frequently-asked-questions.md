@@ -46,4 +46,4 @@ Do the following:
 
 **What does the CloudSkew architecture look like?**
 
-Take a [look](https://assets.cloudskew.com/assets/misc/cloudskew-architecture-20200116.png).
+Take a [look](../about/cloudskew-architecture.md).

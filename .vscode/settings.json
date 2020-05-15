@@ -1,16 +1,33 @@
 {
     "cSpell.words": [
+        "Alibaba",
+        "SKUs",
+        "SVGs",
+        "anonymized",
         "aspnet",
+        "brotli",
+        "checkins",
         "cloudskew",
+        "cname",
         "cncf",
         "corp",
+        "debouncing",
+        "dtus",
+        "failover",
         "hashi",
+        "hostnames",
+        "jwts",
         "keda",
         "kubernetes",
         "microservices",
         "mortems",
+        "oidc",
         "petshop",
+        "pitr",
         "presales",
-        "vuepress"
+        "rbac",
+        "rbac'ed",
+        "vuepress",
+        "webhook"
     ]
 }

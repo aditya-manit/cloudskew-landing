@@ -5,6 +5,12 @@ module.exports = {
     ['link', { rel: 'icon', href: `/assets/cloudskew-logo.png` }],
   ],
   plugins: {
+    'vuepress-plugin-container': {
+      type: 'tip',
+      defaultTitle: {
+        '/': 'Note',
+      },
+    },
     '@vuepress/back-to-top': {
     },
     '@vuepress/medium-zoom': {
@@ -43,6 +49,7 @@ module.exports = {
           {
             items: [
               { text: 'Attribution', link: '/about/attribution' },
+              { text: `CloudSkew Architecture`, link: '/about/cloudskew-architecture' },
               { text: 'Privacy Policy', link: '/about/privacy-policy' },
               { text: 'Professional Services', link: '/about/professional-services' },
             ],
@@ -83,6 +90,7 @@ function getAboutSidebar() {
       collapsable: false,
       children: [ // please keep this list alphabetically sorted
         'attribution',
+        'cloudskew-architecture',
         'privacy-policy',
         'professional-services',
       ],

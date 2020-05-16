@@ -1,10 +1,17 @@
+---
+metaTitle: CloudSkew Architecture
+meta:
+- name: 'og:image'
+  content: 'https://assets.cloudskew.com/assets/misc/landing-page-hero-3.png'
+---
+
 # CloudSkew Architecture
 
-CloudSkew is a free online diagram editor for sketching cloud architecture diagrams ([see a quick demo video](https://www.youtube.com/watch?v=d-lIrtaFUe0)). Icons for AWS, Azure, GCP, Kubernetes, Alibaba Cloud etc are already preloaded in the app. All diagrams are securely saved in the cloud. The full list of CloudSkew's features & capabilities can be seen [here](../docs/features.md). Currently, the product is in public preview.
+CloudSkew is a free online diagram editor for sketching cloud architecture diagrams ([see a quick demo video](https://www.youtube.com/watch?v=d-lIrtaFUe0)). Icons for AWS, Azure, GCP, Kubernetes, Alibaba Cloud etc are already preloaded in the app. All diagrams are securely saved in the cloud. Here are some [sample diagrams](./../docs/samples.md) created with CloudSkew. The full list of CloudSkew's features & capabilities can be seen [here](../docs/features.md). Currently, the product is in public preview.
 
 In this document, we'll do a deep-dive on CloudSkew's building blocks while also discussing the lessons learnt, key decisions & trade offs made _(this living document will be frequently updated as the architecture evolves)_. The diagram below represents the overall architecture of CloudSkew.
 
-![cloudskew architecture](https://assets.cloudskew.com/assets/misc/landing-page-hero-3.png)
+![cloudskew architecture](./../.vuepress/public/assets/pages/cloudskew-architecture/cloudskew-architecture.png)
 <p style="text-align: center;"><i><small><b>CloudSkew Architecture</b></small></i></p>
 
 ## Apps
@@ -111,11 +118,37 @@ The web API apps self-bootstrap by reading their configuration settings from the
 
 Details coming soon!
 
-## Monitoring
+## APM
 
-Details coming soon!
+The [Application Insights SDK](https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview) is used by the diagram editor (front-end [Angular SPA]((https://devblogs.microsoft.com/premier-developer/angular-how-to-add-application-insights-to-an-angular-spa/))) to get some user insights.
+
+E.g. We're interested in tracking the names of icons that the users couldn't find in the icon palette (via the icon search box). This helps us add these frequently searched icons into the palette later on.
+
+App Insight's [custom events](https://docs.microsoft.com/en-us/azure/azure-monitor/app/api-custom-events-metrics) help us log such information. [KQL queries](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/samples) are used to mine the aggregated data.
+
+## Infrastructure Monitoring
+
+[Azure Portal Dashboards](https://docs.microsoft.com/en-us/azure/azure-portal/azure-portal-dashboards) are used to visualize metrics from the various azure services consumed by CloudSkew.
 
 ![azure portal dashboards](./../.vuepress/public/assets/pages/cloudskew-architecture/azure-portal-dashboard.png)
+
+## Incident Management
+
+[Azure Monitor's](https://docs.microsoft.com/en-us/azure/azure-monitor/overview) [metric-based alerts](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/alerts-metric-overview) are being used to get incident notifications over email & slack. Some examples of conditions that trigger alerts:
+
+* [Sev 0] 5xx errors in the web APIs required for printing/exporting diagrams.
+* [Sev 1] 5xx errors in other CloudSkew web APIs
+* [Sev 2] Response time of web APIs crossing specified thresholds.
+* [Sev 2] Spikes in DTU consumption in SQL Azure DBs.
+* [Sev 3] Spike in E2E latency for blob storage requests.
+
+Metrics are evaluated/sampled at 15 mins frequency with 1 hr aggregation windows.
+
+![azure monitor metric alerts](./../.vuepress/public/assets/pages/cloudskew-architecture/azure-monitor-metric-alerts.png)
+
+::: tip
+Currently, 100% of the incoming metrics are sampled. Over time, as usage grows, we'll start filtering out outliers at P99.
+:::
 
 ## Resource Provisioning
 
@@ -159,11 +192,18 @@ Azure Pipelines [deployment jobs](https://docs.microsoft.com/en-us/azure/devops/
 
 ![azure pipelines manual approval](./../.vuepress/public/assets/pages/cloudskew-architecture/azure-pipelines-manual-approval.png)
 
-## Future Plans
+## Future Architectural Changes
 
-Details coming soon!
+As more [features are added](./../docs/features.md#planned-features) and as usage grows, some architectural enhancements will have to be considered:
 
-<br>
+* Use of caching in the back-end ([Azure Cache for Redis](https://azure.microsoft.com/en-in/services/cache/), ASP.NET's [IMemoryCache](https://docs.microsoft.com/en-us/aspnet/core/performance/caching/memory?view=aspnetcore-3.1))
+* HA with multi-regional deployments and using [Traffic Manager](https://docs.microsoft.com/en-us/azure/traffic-manager/traffic-manager-overview) for routing traffic.
+* Move to a higher App Service SKU to avail of slot swapping, horizontal auto-scaling etc.
+* Changes to the deployment & release model with blue-green deployments and adoption of feature flags etc.
+* PowerBI/Grafana dashboard for tracking business KPIs.
+
+Again, any of these decisions will ultimately be need & data driven.
+
 <br>
 
 _Please feel free to [email us](mailto:support@cloudskew.com) in case you have any questions, comments or suggestions regarding this article. Happy Diagramming!_

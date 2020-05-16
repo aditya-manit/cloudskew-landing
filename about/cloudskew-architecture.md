@@ -7,12 +7,6 @@ In this document, we'll do a deep-dive on CloudSkew's building blocks while also
 ![cloudskew architecture](https://assets.cloudskew.com/assets/misc/landing-page-hero-3.png)
 <p style="text-align: center;"><i><small><b>CloudSkew Architecture</b></small></i></p>
 
-## Our Playbook & Ground Rules
-
-@todo (guiding principles)
-
-Now let's look at the individual sections in detail.
-
 ## Apps
 
 At it's core, CloudSkew's front-end consists of two web apps:
@@ -115,18 +109,11 @@ The web API apps self-bootstrap by reading their configuration settings from the
 
 ## Queue-Based Load Leveling
 
-* Azure Service Bus
-* Azure Functions
+Details coming soon!
 
 ## Monitoring
 
-* Application Insights
-* alerts
-* metrics
-* slack integration
-* Azure Monitor
-* Kusto
-* Azure Portal Dashboards
+Details coming soon!
 
 ![azure portal dashboards](./../.vuepress/public/assets/pages/cloudskew-architecture/azure-portal-dashboard.png)
 
@@ -174,10 +161,9 @@ Azure Pipelines [deployment jobs](https://docs.microsoft.com/en-us/azure/devops/
 
 ## Future Plans
 
-## FAQs
+Details coming soon!
 
-Why microservices?
-Why serverless/PaaS?
+<br>
+<br>
 
-Full gamut of azure services.
-Note on consulting services
+_Please feel free to [email us](mailto:support@cloudskew.com) in case you have any questions, comments or suggestions regarding this article. Happy Diagramming!_

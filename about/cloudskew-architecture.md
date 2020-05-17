@@ -1,5 +1,6 @@
 ---
 metaTitle: CloudSkew Architecture
+description: Take a peek into the internals of CloudSkew
 meta:
 - name: 'og:image'
   content: 'https://assets.cloudskew.com/assets/misc/landing-page-hero-3.png'

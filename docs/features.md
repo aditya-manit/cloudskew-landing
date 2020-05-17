@@ -4,7 +4,7 @@
 
 :heavy_check_mark: The following features are available in CloudSkew right now (see [release notes](https://github.com/cloudskew/cloudskew/releases)):
 
-* Icons for Azure, AWS, GCP, CNCF, Alibaba Cloud and more are preloaded in the app.
+* Icons for Azure, AWS, GCP, Kubernetes/CNCF, Alibaba Cloud and more are preloaded in the app.
 * Create a new diagram from a template (or simply create a new empty diagram).
 * Draw arbitrarily large (multi-page) diagrams on an infinite canvas.
 * Print a diagram and/or export it to `.png`, `.jpg` or `.bmp` formats.

@@ -9,7 +9,7 @@ meta:
 - name: 'og:description'
   content: Take a peek into the internals of CloudSkew
 - name: 'twitter:card'
-  content: summary_large_image
+  content: summary
 - name: 'twitter:title'
   content: CloudSkew Architecture
 - name: 'twitter:description'

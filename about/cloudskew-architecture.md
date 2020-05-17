@@ -132,7 +132,7 @@ App Insight's [custom events](https://docs.microsoft.com/en-us/azure/azure-monit
 
 ## Infrastructure Monitoring
 
-[Azure Portal Dashboards](https://docs.microsoft.com/en-us/azure/azure-portal/azure-portal-dashboards) are used to visualize metrics from the various azure services consumed by CloudSkew.
+[Azure Portal Dashboards](https://docs.microsoft.com/en-us/azure/azure-portal/azure-portal-dashboards) are used to visualize metrics from the various azure resources deployed by CloudSkew.
 
 ![azure portal dashboards](./../.vuepress/public/assets/pages/cloudskew-architecture/azure-portal-dashboard.png)
 
@@ -158,7 +158,7 @@ Currently, 100% of the incoming metrics are sampled. Over time, as usage grows, 
 
 [Terraform](https://www.terraform.io/docs/index.html) scripts are used to provision all of the Azure resources & services shown in the architecture diagram (storage accounts, app services, CDN, DNS zone, container registry, functions, sql server, service bus etc). Use of terraform allows us to easily achieve parity in dev, test & prod environments. Although these three environments are mostly identical clones of each other, there are some minor differences:
 
-* App configuration data stored in Key Vault will have different values. This helps apps to bootstrap accordingly.
+* Across the dev, test and prod environments, the app configuration data stored in the Key Vaults will have the same key names but different values. This helps apps to bootstrap accordingly.
 * The dev environments are ephemeral, created on demand and are disposed when not in use.
 * For cost reasons, smaller resource SKUs are used in dev & test environments (e.g. Basic/B 5 DTUs SQL Azure in test environment as compared to Standard/S0 20 DTU in production).  
 
@@ -180,7 +180,7 @@ Feature development & bug fixes happen in private/feature branches which are ult
 
 The pipelines are [authored in YAML](https://docs.microsoft.com/en-us/azure/devops/pipelines/yaml-schema?view=azure-devops&tabs=schema%2Cparameter-schema) and executed on [Microsoft-hosted Ubuntu agents](https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/hosted?view=azure-devops).
 
-We heavily leverage the [built-in tasks](https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/?view=azure-devops) for deploying changes to azure app services, functions, storage accounts, container registry etc. Access to azure resource is authorized via [service connections](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/service-endpoints?view=azure-devops&tabs=yaml).
+Azure pipelines' [built-in tasks](https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/?view=azure-devops) are heavily leveraged for deploying changes to azure app services, functions, storage accounts, container registry etc. Access to azure resource is authorized via [service connections](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/service-endpoints?view=azure-devops&tabs=yaml).
 
 ![azure pipelines continuous integration](./../.vuepress/public/assets/pages/cloudskew-architecture/azure-pipelines-continuous-integration.png)
 
@@ -200,13 +200,13 @@ Azure Pipelines [deployment jobs](https://docs.microsoft.com/en-us/azure/devops/
 
 As more [features are added](./../docs/features.md#planned-features) and as usage grows, some architectural enhancements will have to be considered:
 
-* Use of caching in the back-end ([Azure Cache for Redis](https://azure.microsoft.com/en-in/services/cache/), ASP.NET's [IMemoryCache](https://docs.microsoft.com/en-us/aspnet/core/performance/caching/memory?view=aspnetcore-3.1))
 * HA with multi-regional deployments and using [Traffic Manager](https://docs.microsoft.com/en-us/azure/traffic-manager/traffic-manager-overview) for routing traffic.
 * Move to a higher App Service SKU to avail of slot swapping, horizontal auto-scaling etc.
+* Use of caching in the back-end ([Azure Cache for Redis](https://azure.microsoft.com/en-in/services/cache/), ASP.NET's [IMemoryCache](https://docs.microsoft.com/en-us/aspnet/core/performance/caching/memory?view=aspnetcore-3.1))
 * Changes to the deployment & release model with blue-green deployments and adoption of feature flags etc.
 * PowerBI/Grafana dashboard for tracking business KPIs.
 
-Again, any of these decisions will ultimately be need & data driven.
+Again, any of these enhancements will ultimately be need driven.
 
 <br>
 

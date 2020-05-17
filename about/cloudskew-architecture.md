@@ -4,17 +4,19 @@ meta:
 - name: 'og:image'
   content: 'https://assets.cloudskew.com/assets/misc/landing-page-hero-3.png'
 - name: 'og:description'
-  content: Take a peek into the internals of CloudSKew
+  content: Take a peek into the internals of CloudSkew
 ---
 
 # CloudSkew Architecture
 
 CloudSkew is a free online diagram editor for sketching cloud architecture diagrams ([see a quick demo video](https://www.youtube.com/watch?v=d-lIrtaFUe0)). Icons for AWS, Azure, GCP, Kubernetes, Alibaba Cloud etc are already preloaded in the app. All diagrams are securely saved in the cloud. Here are some [sample diagrams](./../docs/samples.md) created with CloudSkew. The full list of CloudSkew's features & capabilities can be seen [here](../docs/features.md). Currently, the product is in public preview.
 
-In this document, we'll do a deep-dive on CloudSkew's building blocks while also discussing the lessons learnt, key decisions & trade offs made _(this living document will be frequently updated as the architecture evolves)_. The diagram below represents the overall architecture of CloudSkew.
+In this document, we'll do a deep-dive on CloudSkew's building blocks while also discussing the lessons learnt, key decisions & trade offs made _(this living document will be frequently updated as the architecture evolves)_.
 
 ![cloudskew architecture](./../.vuepress/public/assets/pages/cloudskew-architecture/cloudskew-architecture.png)
 <p style="text-align: center;"><i><small><b>CloudSkew Architecture</b></small></i></p>
+
+The diagram above represents the overall architecture of CloudSkew. Let's now take a look at the individual building blocks.
 
 ## Apps
 
@@ -34,7 +36,7 @@ The back-end consists of two web API apps, both authored using ASP.NET Core 3.1:
 
 Using ASP.NET Core's [middleware](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/middleware/?view=aspnetcore-3.1), we ensure that:
 
-* JWT authentication is enforced. Also using [policy-based authorization](https://docs.microsoft.com/en-us/aspnet/core/security/authorization/policies?view=aspnetcore-3.1) for RBAC (ensuring that claims mapping to user permissions are present in the JWT).
+* JWT authentication is enforced. Use of [policy-based authorization](https://docs.microsoft.com/en-us/aspnet/core/security/authorization/policies?view=aspnetcore-3.1) for RBAC ensures that claims mapping to user permissions are present in the JWT.
 * Only the diagram editor (front-end app) can invoke these APIs ([CORS settings](https://docs.microsoft.com/en-us/aspnet/core/security/cors?view=aspnetcore-3.1)).
 * Brotli [response compression](https://docs.microsoft.com/en-us/aspnet/core/performance/response-compression?view=aspnetcore-3.1) is enabled for reducing payload sizes.
 
@@ -50,7 +52,7 @@ Separate DTO/REST and DBContext/SQL models are maintained for all entities, with
 
 Auth0 creates & maintains the user profiles for all signed-up users. Authorization/RBAC is managed by assigning [Auth0 roles](https://auth0.com/docs/authorization/concepts/rbac) to these user profiles. Each role contains a collections of permissions that can be assigned to the users (they show up as custom claims in the JWTs).
 
-We're also using Auth0 [rules](https://auth0.com/docs/rules) to inject custom claims in the JWT and whitelist/blacklist users.
+Auth0 [rules](https://auth0.com/docs/rules) are used to inject custom claims in the JWT and whitelist/blacklist users.
 
 ## Databases
 

@@ -125,13 +125,15 @@ The web API apps self-bootstrap by reading their configuration settings from the
 
 Details coming soon!
 
-## APM & Observability
+## APM
 
 The [Application Insights SDK](https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview) is used by the diagram editor (front-end [Angular SPA]((https://devblogs.microsoft.com/premier-developer/angular-how-to-add-application-insights-to-an-angular-spa/))) to get some user insights.
 
 E.g. We're interested in tracking the names of icons that the users couldn't find in the icon palette (via the icon search box). This helps us add these frequently searched icons into the palette later on.
 
 App Insight's [custom events](https://docs.microsoft.com/en-us/azure/azure-monitor/app/api-custom-events-metrics) help us log such information. [KQL queries](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/samples) are used to mine the aggregated data.
+
+The App Insight SDK is also used for [logging traces](https://docs.microsoft.com/en-us/azure/azure-monitor/app/api-custom-events-metrics#tracktrace). The log verbosity is configured via app config ([externalized config using Azure Key Vault](#externalized-configuration--self-bootstrapping)).
 
 ## Infrastructure Monitoring
 
@@ -147,7 +149,7 @@ App Insight's [custom events](https://docs.microsoft.com/en-us/azure/azure-monit
 * [Sev 1] 5xx errors in other CloudSkew web APIs
 * [Sev 2] Response time of web APIs crossing specified thresholds.
 * [Sev 2] Spikes in DTU consumption in SQL Azure DBs.
-* [Sev 3] Spike in E2E latency for blob storage requests.
+* [Sev 3] Spikes in E2E latency for blob storage requests.
 
 Metrics are evaluated/sampled at 15 mins frequency with 1 hr aggregation windows.
 

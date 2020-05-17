@@ -5,15 +5,17 @@
 :heavy_check_mark: The following features are available in CloudSkew right now (see [release notes](https://github.com/cloudskew/cloudskew/releases)):
 
 * Icons for Azure, AWS, GCP, CNCF, Alibaba Cloud and more are preloaded in the app.
-* Create a new diagram from a template (or simply a new empty diagram).
+* Create a new diagram from a template (or simply create a new empty diagram).
 * Draw arbitrarily large (multi-page) diagrams on an infinite canvas.
 * Print a diagram and/or export it to `.png`, `.jpg` or `.bmp` formats.
 * Save a diagram as a reusable template.
+* Document and annotate your diagrams using the built-in document editor.
+* Share your diagrams with others by generating links (viewer don't have to login).
 * Lock an entire diagram or just individual symbols (locking make things read-only, preventing them from being edited or deleted).
 * Adjust visual properties of any symbol via the `visual properties` window.
 * Diagrams are auto-saved.
 * Group multiple symbols together.
-* Load icons/symbols from symbol palette onto diagram by single-clicking on it.
+* Load icons/symbols from symbol palette onto diagram by simply single-clicking on it.
 * Search for an icon by typing in the icon name (or a synonym or category) in the symbol search box.
 * Undo & redo actions.
 * Access frequent commands via context menu (cut, copy, paste, delete etc).

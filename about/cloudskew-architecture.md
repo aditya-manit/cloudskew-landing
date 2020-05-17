@@ -85,7 +85,7 @@ Two more storage accounts are provisioned for serving the static content (mostly
 Two [Azure App Services on Linux](https://docs.microsoft.com/en-us/azure/app-service/containers/app-service-linux-intro) are also provisioned for hosting the containerized [back-end web APIs](#web-apis). Both app services share the same [App Service Plan](https://docs.microsoft.com/en-us/azure/app-service/overview-hosting-plans).
 
 * For CloudSkew's preview version we're using the `B1 (100 ACU, 1.75 GB Mem)` plan which unfortunately does not include automatic horizontal scale-outs (i.e. scale-outs have to be done manually).
-* Managed Identity is enabled for both app services, required for [accessing the Key Vault](#externalized-configuration--self-bootstrapping).
+* Managed Identity is enabled for both app services, required for [accessing the Key Vault](#externalized-configuration-self-bootstrapping).
 * The `Always On` settings have been enabled.
 * An [Azure Container Registry](https://docs.microsoft.com/en-in/azure/container-registry/container-registry-intro) is also provisioned. The deployment pipeline packages the API apps as docker images and pushes to the container registry. The app services pull from it (using webhook notifications).
 
@@ -133,7 +133,7 @@ E.g. We're interested in tracking the names of icons that the users couldn't fin
 
 App Insight's [custom events](https://docs.microsoft.com/en-us/azure/azure-monitor/app/api-custom-events-metrics) help us log such information. [KQL queries](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/samples) are used to mine the aggregated data.
 
-The App Insight SDK is also used for [logging traces](https://docs.microsoft.com/en-us/azure/azure-monitor/app/api-custom-events-metrics#tracktrace). The log verbosity is configured via app config ([externalized config using Azure Key Vault](#externalized-configuration--self-bootstrapping)).
+The App Insight SDK is also used for [logging traces](https://docs.microsoft.com/en-us/azure/azure-monitor/app/api-custom-events-metrics#tracktrace). The log verbosity is configured via app config ([externalized config using Azure Key Vault](#externalized-configuration-self-bootstrapping)).
 
 ## Infrastructure Monitoring
 
@@ -215,7 +215,7 @@ Again, any of these enhancements will ultimately be need-driven.
 
 ## Closing Notes
 
-CloudSkew is in very early stages of development and there are some thumb rules it abides by:
+CloudSkew is in very early stages of development and there are some simple thumb rules it abides by:
 
 * **Preferring PaaS/serverless over IaaS**: Pay as you go, no server management overhead _(aside: this is also why K8s clusters are not in the picture yet)_.
 * **Preferring microservices over monoliths**: Individual lego blocks can be independently deployed & scaled up/out.

@@ -8,6 +8,14 @@ meta:
   content: 'https://assets.cloudskew.com/assets/misc/landing-page-hero-3.png'
 - name: 'og:description'
   content: Take a peek into the internals of CloudSkew
+- name: 'twitter:card'
+  content: summary_large_image
+- name: 'twitter:title'
+  content: CloudSkew Architecture
+- name: 'twitter:description'
+  content: Take a peek into the internals of CloudSkew
+- name: 'twitter:image'
+  content: 'https://assets.cloudskew.com/assets/misc/landing-page-hero-3.png'
 ---
 
 # CloudSkew Architecture

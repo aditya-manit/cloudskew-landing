@@ -14,12 +14,12 @@ meta:
 
 CloudSkew is a free online diagram editor for sketching cloud architecture diagrams ([see a quick demo video](https://www.youtube.com/watch?v=d-lIrtaFUe0)). Icons for AWS, Azure, GCP, Kubernetes, Alibaba Cloud etc are already preloaded in the app. All diagrams are securely saved in the cloud. Here are some [sample diagrams](./../docs/samples.md) created with CloudSkew. The full list of CloudSkew's features & capabilities can be seen [here](../docs/features.md). Currently, the product is in public preview.
 
-In this document, we'll do a deep-dive on CloudSkew's building blocks while also discussing the lessons learnt, key decisions & trade offs made _(this living document will be frequently updated as the architecture evolves)_.
+In this document, we'll do a deep-dive on CloudSkew's building blocks while also discussing the lessons learnt, key decisions & trade offs made _(this living document will be frequently updated as the architecture evolves)_. The diagram below represents the overall architecture of CloudSkew.
 
 ![cloudskew architecture](./../.vuepress/public/assets/pages/cloudskew-architecture/cloudskew-architecture.png)
 <p style="text-align: center;"><i><small><b>CloudSkew Architecture</b></small></i></p>
 
-The diagram above represents the overall architecture of CloudSkew. Let's now take a look at the individual building blocks.
+CloudSkew's infrastructure has been built on top of various Azure services - snapped together like lego blocks. Let's now take a look at the individual pieces.
 
 ## Apps
 
@@ -125,7 +125,7 @@ The web API apps self-bootstrap by reading their configuration settings from the
 
 Details coming soon!
 
-## APM
+## APM & Observability
 
 The [Application Insights SDK](https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview) is used by the diagram editor (front-end [Angular SPA]((https://devblogs.microsoft.com/premier-developer/angular-how-to-add-application-insights-to-an-angular-spa/))) to get some user insights.
 
@@ -201,7 +201,7 @@ Azure Pipelines [deployment jobs](https://docs.microsoft.com/en-us/azure/devops/
 
 ## Future Architectural Changes
 
-As more [features are added](./../docs/features.md#planned-features) and as usage grows, some architectural enhancements will have to be considered:
+As more [features will be added](./../docs/features.md#planned-features) and as usage grows, some architectural enhancements will have to be considered:
 
 * HA with multi-regional deployments and using [Traffic Manager](https://docs.microsoft.com/en-us/azure/traffic-manager/traffic-manager-overview) for routing traffic.
 * Move to a higher App Service SKU to avail of slot swapping, horizontal auto-scaling etc.
@@ -209,8 +209,18 @@ As more [features are added](./../docs/features.md#planned-features) and as usag
 * Changes to the deployment & release model with blue-green deployments and adoption of feature flags etc.
 * PowerBI/Grafana dashboard for tracking business KPIs.
 
-Again, any of these enhancements will ultimately be need driven.
+Again, any of these enhancements will ultimately be need-driven.
 
-<br>
+## Closing Notes
 
-_Please feel free to [email us](mailto:support@cloudskew.com) in case you have any questions, comments or suggestions regarding this article. Happy Diagramming!_
+CloudSkew is in very early stages of development and there are some thumb rules it abides by:
+
+* **Preferring PaaS/serverless over IaaS**: Pay as you go, no server management overhead _(aside: this is also why K8s clusters are not in the picture yet)_.
+* **Preferring microservices over monoliths**: Individual lego blocks can be independently deployed & scaled up/out.
+* **Always keeping the infrastructure stable**: Everything infra-related is automated: from provisioning to scaling to monitoring. An "it just works" infra helps maintain the core focus on user-facing features.
+* **Releasing Frequently**: The goal is to rapidly go from idea -> development -> deployment -> release. Having ultra-simple CI, deployment & release processes go a long way in helping achieve that.
+* **No premature optimization**: All changes for making things more "efficient" is done just-in-time and has to be need-driven _(e.g: Redis cache is currently not required at the back-end since API response times are within acceptable thresholds)_.
+
+When CloudSkew reaches critical mass in the future, this playbook will of course have to be modified.
+
+Please feel free to [email us](mailto:support@cloudskew.com) in case you have any questions, comments or suggestions regarding this article. Happy Diagramming!

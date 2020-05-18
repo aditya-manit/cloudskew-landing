@@ -38,3 +38,8 @@ meta:
 
 **Kubernetes resource map** [(see it live)](https://app.cloudskew.com/viewer/0610ccbc-c6b6-4167-9fa9-2903a513da08)
 ![kubernetes resource map](https://assets.cloudskew.com/assets/samples/kubernetes-resource-map.png)
+
+## Oracle Cloud (OCI)
+
+**Migration of On-Prem Oracle DB to OCI** [(see it live)](https://app.cloudskew.com/viewer/0831890b-183d-49ca-9818-57c1af749a3f)
+![migration of on-prem oracle db to oci](https://assets.cloudskew.com/assets/samples/oci-onprem-db-migration)

@@ -20,7 +20,7 @@ meta:
 
 # CloudSkew Architecture
 
-CloudSkew is a free online diagram editor for sketching cloud architecture diagrams ([see a quick demo video](https://www.youtube.com/watch?v=d-lIrtaFUe0)). Icons for AWS, Azure, GCP, Kubernetes, Alibaba Cloud etc are already preloaded in the app. All diagrams are securely saved in the cloud. Here are some [sample diagrams](./../docs/samples.md) created with CloudSkew. The full list of CloudSkew's features & capabilities can be seen [here](../docs/features.md). Currently, the product is in public preview.
+CloudSkew is a free online diagram editor for sketching cloud architecture diagrams ([see a quick demo video](https://www.youtube.com/watch?v=d-lIrtaFUe0)). Icons for AWS, Azure, GCP, Kubernetes, Alibaba Cloud, Oracle Cloud etc are already preloaded in the app. All diagrams are securely saved in the cloud. Here are some [sample diagrams](./../docs/samples.md) created with CloudSkew. The full list of CloudSkew's features & capabilities can be seen [here](../docs/features.md). Currently, the product is in public preview.
 
 In this document, we'll do a deep-dive on CloudSkew's building blocks while also discussing the lessons learnt, key decisions & trade offs made _(this living document will be frequently updated as the architecture evolves)_. The diagram below represents the overall architecture of CloudSkew.
 

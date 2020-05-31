@@ -190,6 +190,10 @@ Currently, 100% of the incoming metrics are sampled. Over time, as usage grows, 
 The Auth0 tenant has been set up manually since there are no terraform providers for it. However it looks like it might be possible to automate the provisioning using [Auth0's Deploy CLI](https://auth0.com/docs/extensions/deploy-cli).
 :::
 
+::: tip
+CloudSkew's provisioning script are being migrated from terraform to [pulumi](https://www.pulumi.com/). This article will be updated as soon as the migration is complete.
+:::
+
 ## Continuous Integration
 
 The source code is split across multiple private [Azure Repos](https://docs.microsoft.com/en-us/azure/devops/repos/get-started/what-is-repos?view=azure-devops). The _"one repository per app"_ rule of thumb is enforced here. An app is deployed to dev, test & prod environments from the same repo.

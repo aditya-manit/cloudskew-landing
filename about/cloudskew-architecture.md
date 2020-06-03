@@ -33,6 +33,14 @@ CloudSkew's infrastructure has been built on top of various Azure services - sna
 This article is a part of the #AppliedCloudStoriesContest [(aka.ms/applied-cloud-stories)](https://www.cloudstories.dev) and #AzureDevStories [(http://konf.me/ds)](http://konf.me/ds) initiatives.
 :::
 
+::: tip
+The video below recaps how CloudSkew was built. You can skip reading the rest of the article and watch this video instead!
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Q8xriCUFmaA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br>
+<br>
+:::
+
 ## Apps
 
 At it's core, CloudSkew's front-end consists of two web apps:

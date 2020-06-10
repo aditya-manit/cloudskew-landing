@@ -2,7 +2,7 @@
 home: true
 heroImage: 'https://assets.cloudskew.com/assets/misc/landing-page-hero-aws.png'
 heroText: 
-tagline: Draw AWS architecture diagrams for free!
+tagline: Draw AWS architecture diagrams for free
 actionText: Get Started
 actionLink: 'https://app.cloudskew.com'
 features:

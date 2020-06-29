@@ -12,6 +12,9 @@ meta:
 
 ## AWS
 
+**Smart products platform** [(see it live)](https://app.cloudskew.com/viewer/e21cca59-ada0-48a1-928a-6628042afebf)
+![aws smart products platform](https://assets.cloudskew.com/assets/samples/aws-smart-products-platform.png)
+
 **Real-time analytics pipeline** [(see it live)](https://app.cloudskew.com/viewer/eae9d99c-7103-41db-8407-9967e4fddb07)
 ![aws serverless realtime analytics pipeline](https://assets.cloudskew.com/assets/samples/aws-serverless-realtime-analytics-pipeline.png)
 

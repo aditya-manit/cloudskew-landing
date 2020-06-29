@@ -2,7 +2,7 @@
 home: true
 heroImage: 'https://assets.cloudskew.com/assets/misc/landing-page-hero-3.png'
 heroText: 
-tagline: Draw cloud architecture diagrams for free!
+tagline: Draw cloud architecture diagrams for free
 actionText: Get Started
 actionLink: 'https://app.cloudskew.com'
 features:

@@ -33,7 +33,6 @@ module.exports = {
     nextLinks: false,
 
     nav: [
-      // { text: 'Blog', link: '/blog/' },
       { text: 'Samples', link: '/docs/samples' },
       { text: 'Docs', link: '/docs/frequently-asked-questions' },
       // { text: 'Articles', link: '/articles/cross-cutting-concerns-for-cloud-architectures' },
@@ -41,6 +40,7 @@ module.exports = {
       { text: 'Login / Signup', link: 'https://app.cloudskew.com' },
       { text: 'Status', link: '/status/current-status' },
       { text: 'Services', link: '/about/professional-services' },
+      { text: 'Blog', link: 'https://blog.cloudskew.com' },
       {
         text: 'About',
         ariaLabel: 'About menu',

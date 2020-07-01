@@ -2,7 +2,7 @@ module.exports = {
   title: 'CloudSkew',
   description: 'Draw AWS, Azure, GCP, Kubernetes diagrams for free',
   head: [
-    ['link', { rel: 'icon', href: `/assets/cloudskew-logo.png` }],
+    ['link', { rel: 'icon', href: `/assets/cloudskew-logo.png` }], // favicon
   ],
   plugins: {
     'vuepress-plugin-container': {
@@ -26,7 +26,7 @@ module.exports = {
     },
   },
   themeConfig: {
-    // logo: '/assets/cloudskew-logo.png',
+    logo: '/assets/cloudskew-logo.png',
 
     // disable the prev, next links (they're annoying & distracting)
     prevLinks: false,

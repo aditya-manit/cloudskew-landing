@@ -3,7 +3,7 @@ home: true
 heroImage: 'https://assets.cloudskew.com/assets/misc/landing-page-hero-k8s.png'
 heroText: 
 tagline: Draw kubernetes architecture diagrams for free
-actionText: Get Started
+actionText: Go To App
 actionLink: 'https://app.cloudskew.com'
 features:
 - title: No installation needed

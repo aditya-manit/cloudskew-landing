@@ -3,7 +3,7 @@ home: true
 heroImage: 'https://assets.cloudskew.com/assets/misc/landing-page-hero-gcp.png'
 heroText: 
 tagline: Draw GCP architecture diagrams for free
-actionText: Get Started
+actionText: Go To App
 actionLink: 'https://app.cloudskew.com'
 features:
 - title: No installation needed

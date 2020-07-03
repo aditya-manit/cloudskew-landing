@@ -37,7 +37,7 @@ module.exports = {
       { text: 'Docs', link: '/docs/frequently-asked-questions' },
       // { text: 'Articles', link: '/articles/cross-cutting-concerns-for-cloud-architectures' },
       // { text: 'Case Studies', link: '/case-studies/frequently-asked-questions' },
-      { text: 'Login / Signup', link: 'https://app.cloudskew.com' },
+      { text: 'Go To App', link: 'https://app.cloudskew.com' },
       { text: 'Status', link: '/status/current-status' },
       { text: 'Services', link: '/about/professional-services' },
       { text: 'Blog', link: 'https://blog.cloudskew.com' },

@@ -24,7 +24,7 @@ CloudSkew is a free online diagram editor for sketching cloud architecture diagr
 
 In this document, we'll do a deep-dive on CloudSkew's building blocks while also discussing the lessons learnt, key decisions & trade offs made _(this living document will be frequently updated as the architecture evolves)_. The diagram below represents the overall architecture of CloudSkew.
 
-![cloudskew architecture](./../.vuepress/public/assets/pages/cloudskew-architecture/cloudskew-architecture.png)
+![cloudskew architecture](https://assets.cloudskew.com/assets/pages/cloudskew-architecture/cloudskew-architecture.png)
 <p style="text-align: center;"><i><small><b>CloudSkew Architecture</b></small></i></p>
 
 CloudSkew's infrastructure has been built on top of various Azure services - snapped together like lego blocks. Let's now take a look at the individual pieces.
@@ -71,7 +71,7 @@ Separate DTO/REST and DBContext/SQL models are maintained for all entities, with
 
 [Auth0](https://auth0.com/) is used as the (OIDC compliant) identity platform for CloudSkew. Users can login via Github or LinkedIn; the handshake with these identity providers is managed by Auth0 itself. Using implicit flow, ID and access tokens (JWTs) are granted to the diagram editor app. The [Auth0.JS SDK](https://auth0.com/docs/libraries/auth0js/v9) makes all this really trivial to implement. All calls to the back-end web APIs use the access token as the bearer.
 
-![auth0 social connections](./../.vuepress/public/assets/pages/cloudskew-architecture/auth0-social-connections.png)
+![auth0 social connections](https://assets.cloudskew.com/assets/pages/cloudskew-architecture/auth0-social-connections.png)
 
 Auth0 creates & maintains the user profiles for all signed-up users. Authorization/RBAC is managed by assigning [Auth0 roles](https://auth0.com/docs/authorization/concepts/rbac) to these user profiles. Each role contains a collections of permissions that can be assigned to the users (they show up as custom claims in the JWTs).
 
@@ -90,7 +90,7 @@ For the preview version, the SQL Azure SKU being used in production is `Standard
 
 SQL Azure's [built-in geo-redundant DB backups](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-automated-backups?tabs=single-database) offer weekly full DB backups, differential DB backups every 12 hours and transaction log backups every 5 - 10 minutes. SQL Azure internally stores the backups in RA-GRS storage for 7 days. RTO is 12 hrs and RTO is 1 hr. Perhaps less than ideal, but we'll look to improve matters here once CloudSkew's usage grows.
 
-![sql azure pitr backups](./../.vuepress/public/assets/pages/cloudskew-architecture/sql-azure-pitr-backups.png)
+![sql azure pitr backups](https://assets.cloudskew.com/assets/pages/cloudskew-architecture/sql-azure-pitr-backups.png)
 
 [Azure CosmosDB](https://docs.microsoft.com/en-us/azure/cosmos-db/introduction)'s usage is purely experimental at this point, mainly for the analysis of anonymized, read-only user data in [graph format over gremlin APIs](https://docs.microsoft.com/en-us/azure/cosmos-db/graph-introduction) _(more details on this will be shared in a future article)_. Technically speaking, this database can be removed without any impact to user-facing features.
 
@@ -98,7 +98,7 @@ SQL Azure's [built-in geo-redundant DB backups](https://docs.microsoft.com/en-us
 
 Two [Azure Storage Accounts](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blobs-overview) are provisioned for hosting the front-end apps: landing page & diagram editor. The apps are served via the `$web` blob containers for static sites.
 
-![azure storage static website](./../.vuepress/public/assets/pages/cloudskew-architecture/azure-storage-static-website.png)
+![azure storage static website](https://assets.cloudskew.com/assets/pages/cloudskew-architecture/azure-storage-static-website.png)
 
 Two more storage accounts are provisioned for serving the static content (mostly icon SVGs) and user-uploaded images (PNG, JPG files) as blobs.
 
@@ -109,13 +109,13 @@ Two [Azure App Services on Linux](https://docs.microsoft.com/en-us/azure/app-ser
 * The `Always On` settings have been enabled.
 * An [Azure Container Registry](https://docs.microsoft.com/en-in/azure/container-registry/container-registry-intro) is also provisioned. The deployment pipeline packages the API apps as docker images and pushes to the container registry. The app services pull from it (using webhook notifications).
 
-![azure container registry](./../.vuepress/public/assets/pages/cloudskew-architecture/azure-container-registry.png)
+![azure container registry](https://assets.cloudskew.com/assets/pages/cloudskew-architecture/azure-container-registry.png)
 
 ## Caching & Compression
 
 An [Azure CDN profile](https://docs.microsoft.com/en-us/azure/cdn/cdn-overview) is provisioned with four endpoints, the first two using the hosted front-end apps (landing page & diagram editor) as origins and the other two pointing to the storage accounts (for icon SVGs & user-uploaded images).
 
-![azure cdn profile endpoints](./../.vuepress/public/assets/pages/cloudskew-architecture/azure-cdn-profile-endpoints.png)
+![azure cdn profile endpoints](https://assets.cloudskew.com/assets/pages/cloudskew-architecture/azure-cdn-profile-endpoints.png)
 
 In addition to caching at global POPs, [content compression at POPs](https://docs.microsoft.com/en-us/azure/cdn/cdn-improve-performance) is also enabled.
 
@@ -123,7 +123,7 @@ In addition to caching at global POPs, [content compression at POPs](https://doc
 
 All CDN endpoints have `<subdomain>.cloudskew.com` custom domain hostnames enabled on them. This is facilitated by using [Azure DNS](https://docs.microsoft.com/en-in/azure/dns/dns-overview) to create CNAME records that map `<subdomain>.cloudskew.com` to their CDN endpoint counterparts.
 
-![azure dns cname records](./../.vuepress/public/assets/pages/cloudskew-architecture/azure-dns-cname-records.png)
+![azure dns cname records](https://assets.cloudskew.com/assets/pages/cloudskew-architecture/azure-dns-cname-records.png)
 
 ## HTTPS & TLS Certificates
 
@@ -139,7 +139,7 @@ The web API apps have [managed identities](https://docs.microsoft.com/en-us/azur
 
 The web API apps self-bootstrap by reading their configuration settings from the Key Vault at startup. The handshake with the Key Vault is facilitated using the [Key Vault Configuration Provider](https://docs.microsoft.com/en-us/aspnet/core/security/key-vault-configuration?view=aspnetcore-3.1).
 
-![azure key vault config provider](./../.vuepress/public/assets/pages/cloudskew-architecture/key-vault-config-provider.png)
+![azure key vault config provider](https://assets.cloudskew.com/assets/pages/cloudskew-architecture/key-vault-config-provider.png)
 
 ## Queue-Based Load Leveling
 
@@ -165,7 +165,7 @@ The App Insight SDK is also used for [logging traces](https://docs.microsoft.com
 
 [Azure Portal Dashboards](https://docs.microsoft.com/en-us/azure/azure-portal/azure-portal-dashboards) are used to visualize metrics from the various azure resources deployed by CloudSkew.
 
-![azure portal dashboards](./../.vuepress/public/assets/pages/cloudskew-architecture/azure-portal-dashboard.png)
+![azure portal dashboards](https://assets.cloudskew.com/assets/pages/cloudskew-architecture/azure-portal-dashboard.png)
 
 ## Incident Management
 
@@ -180,7 +180,7 @@ The App Insight SDK is also used for [logging traces](https://docs.microsoft.com
 
 Metrics are evaluated/sampled at 15 mins frequency with 1 hr aggregation windows.
 
-![azure monitor metric alerts](./../.vuepress/public/assets/pages/cloudskew-architecture/azure-monitor-metric-alerts.png)
+![azure monitor metric alerts](https://assets.cloudskew.com/assets/pages/cloudskew-architecture/azure-monitor-metric-alerts.png)
 
 ::: tip
 Currently, 100% of the incoming metrics are sampled. Over time, as usage grows, we'll start filtering out outliers at P99.
@@ -206,19 +206,19 @@ CloudSkew's provisioning script are being migrated from terraform to [pulumi](ht
 
 The source code is split across multiple private [Azure Repos](https://docs.microsoft.com/en-us/azure/devops/repos/get-started/what-is-repos?view=azure-devops). The _"one repository per app"_ rule of thumb is enforced here. An app is deployed to dev, test & prod environments from the same repo.
 
-![multiple azure repos](./../.vuepress/public/assets/pages/cloudskew-architecture/azure-repos-multiple-repos.png)
+![multiple azure repos](https://assets.cloudskew.com/assets/pages/cloudskew-architecture/azure-repos-multiple-repos.png)
 
 Feature development & bug fixes happen in private/feature branches which are ultimately merged into master branches via pull requests.
 
 [Azure Pipelines](https://docs.microsoft.com/en-us/azure/devops/pipelines/get-started/what-is-azure-pipelines?view=azure-devops) are used for continuous integration: checkins are built, unit tested, packaged and deployed to the test environment. CI pipelines are automatically triggered both on pull request creation as well as checkins to master branches.
 
-![azure pipelines continuous integration](./../.vuepress/public/assets/pages/cloudskew-architecture/azure-pipelines-bdt.png)
+![azure pipelines continuous integration](https://assets.cloudskew.com/assets/pages/cloudskew-architecture/azure-pipelines-bdt.png)
 
 The pipelines are [authored in YAML](https://docs.microsoft.com/en-us/azure/devops/pipelines/yaml-schema?view=azure-devops&tabs=schema%2Cparameter-schema) and executed on [Microsoft-hosted Ubuntu agents](https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/hosted?view=azure-devops).
 
 Azure pipelines' [built-in tasks](https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/?view=azure-devops) are heavily leveraged for deploying changes to azure app services, functions, storage accounts, container registry etc. Access to azure resource is authorized via [service connections](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/service-endpoints?view=azure-devops&tabs=yaml).
 
-![azure pipelines continuous integration](./../.vuepress/public/assets/pages/cloudskew-architecture/azure-pipelines-continuous-integration.png)
+![azure pipelines continuous integration](https://assets.cloudskew.com/assets/pages/cloudskew-architecture/azure-pipelines-continuous-integration.png)
 
 ## Deployment & Release
 
@@ -226,11 +226,11 @@ The deployment & release process is very simple at moment (blue-green deployment
 
 Azure Pipelines [deployment jobs](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/deployment-jobs?view=azure-devops) are used to target the releases to production environment.
 
-![azure pipelines manual approval](./../.vuepress/public/assets/pages/cloudskew-architecture/azure-pipelines-deployment-jobs.png)
+![azure pipelines manual approval](https://assets.cloudskew.com/assets/pages/cloudskew-architecture/azure-pipelines-deployment-jobs.png)
 
 [Manual approvals](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/approvals?view=azure-devops&tabs=check-pass) are used to authorize the releases.
 
-![azure pipelines manual approval](./../.vuepress/public/assets/pages/cloudskew-architecture/azure-pipelines-manual-approval.png)
+![azure pipelines manual approval](https://assets.cloudskew.com/assets/pages/cloudskew-architecture/azure-pipelines-manual-approval.png)
 
 ## Future Architectural Changes
 

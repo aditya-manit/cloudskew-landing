@@ -88,7 +88,7 @@ Because of CloudSkew's auto-save feature, updates to the `Diagram` table happens
 
 For the preview version, the SQL Azure SKU being used in production is `Standard/S0 with 20 DTUs (single database)`. Currently, the DB is only available in one region. Auto-failover groups & active geo-replication (read-replicas) are not being used at present.
 
-SQL Azure's [built-in geo-redundant DB backups](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-automated-backups?tabs=single-database) offer weekly full DB backups, differential DB backups every 12 hours and transaction log backups every 5 - 10 minutes. SQL Azure internally stores the backups in RA-GRS storage for 7 days. RTO is 12 hrs and RTO is 1 hr. Perhaps less than ideal, but we'll look to improve matters here once CloudSkew's usage grows.
+SQL Azure's [built-in geo-redundant DB backups](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-automated-backups?tabs=single-database) offer weekly full DB backups, differential DB backups every 12 hours and transaction log backups every 5 - 10 minutes. SQL Azure internally stores the backups in RA-GRS storage for 7 days. RTO is 12 hrs and RPO is 1 hr. Perhaps less than ideal, but we'll look to improve matters here once CloudSkew's usage grows.
 
 ![sql azure pitr backups](https://assets.cloudskew.com/assets/pages/cloudskew-architecture/sql-azure-pitr-backups.png)
 

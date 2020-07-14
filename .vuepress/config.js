@@ -1,6 +1,6 @@
 module.exports = {
   title: 'CloudSkew',
-  description: 'Draw AWS, Azure, GCP, Kubernetes diagrams for free',
+  description: 'Draw AWS, Azure, GCP, Kubernetes diagrams for free (icons included)',
   head: [
     ['link', { rel: 'icon', href: `/assets/cloudskew-logo.png` }], // favicon
   ],

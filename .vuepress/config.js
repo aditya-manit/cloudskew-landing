@@ -39,7 +39,6 @@ module.exports = {
       // { text: 'Case Studies', link: '/case-studies/frequently-asked-questions' },
       { text: 'Go To App', link: 'https://app.cloudskew.com' },
       { text: 'Status', link: '/status/current-status' },
-      { text: 'Services', link: '/about/professional-services' },
       { text: 'Blog', link: 'https://blog.cloudskew.com' },
       {
         text: 'About',

@@ -117,6 +117,7 @@ function getDocsSidebar() {
       children: [ // please keep this list alphabetically sorted
         'features',
         'frequently-asked-questions',
+        'keyboard-shortcuts',
         'samples',
       ],
     },

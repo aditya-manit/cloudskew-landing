@@ -7,7 +7,7 @@ actionText: Go To App
 actionLink: 'https://app.cloudskew.com'
 features:
 - title: No installation needed
-  details: CloudSkew is an online diagram editor. You don't have to install anything. Just login and start drawing!
+  details: CloudSkew is an online diagram editor. You don't have to install any software. Just login and start drawing!
 - title: All icons included
   details: Icons for AWS, Azure, GCP, Kubernetes, CNCF, Alibaba Cloud, Oracle Cloud (OCI) and more are already available in the app. You don't have to search for & download icons separately.
 - title: It's free

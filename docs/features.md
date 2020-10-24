@@ -32,8 +32,8 @@
 :calendar: In the near team, the following features are on the roadmap (see [planned milestones](https://github.com/cloudskew/cloudskew/milestones)):
 
 * View & adjust z-index of diagram symbols via a separate control.
-* Save checkpoints/snapshots (along with ability to restore-from/rollback-to a previous checkpoint).  
-* Keyboard shortcuts for commonly performed actions.
+* Save checkpoints/snapshots (along with ability to restore-from/rollback-to a previous checkpoint).
+* Drag & drop symbols from the icon palette onto the canvas ([link](https://github.com/cloudskew/cloudskew/issues/14)).
 * More icons, shapes and diagram templates. You can always request specific ones [here](https://github.com/cloudskew/cloudskew/issues/new/choose). You can view existing open requests [here](https://github.com/cloudskew/cloudskew/issues?q=is%3Aopen+is%3Aissue+label%3Aicon-request).
 
 The relative priorities of these planned features will depend on the volume of user requests received. If you have a feature request that's not listed up here, you can file a new one [here](https://github.com/cloudskew/cloudskew/issues/new/choose).

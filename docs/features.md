@@ -36,7 +36,7 @@
 * Drag & drop symbols from the icon palette onto the canvas ([link](https://github.com/cloudskew/cloudskew/issues/14)).
 * Export diagrams as SVG files ([link](https://github.com/cloudskew/cloudskew/issues/59)).
 * A team/enterprise version of this app with the following feature set:
-  * Customer managed storage.
+  * Customer managed storage (Organizations will be able to store the diagrams in a location of their choosing: local disk, github, dropbox, google-drive etc).
   * Encryption at rest with customer managed keys.
   * Login with company credentials.
   * Collaborative editing with RBAC controls.

@@ -22,16 +22,11 @@ Not in the [near-term future](#planned-features-calendar).
 
 ### Any plans to create an offline (desktop) version of this app?
 
-No plans.
+Not in the [near-term future](#planned-features-calendar).
 
 ### Any plans to create a team/enterprise version of this app?
 
-Yes, there are plans to release a team/enterprise version of this app soon with the following feature set:
-
-* Customer managed storage.
-* Encryption at rest with customer managed keys.
-* Login with company credentials.
-* Collaborative editing with RBAC controls.
+[Yes, there are plans](#planned-features-calendar).
 
 ### Any plans to export diagrams as deployable scripts (ARM, CloudFormation, Terraform)?
 

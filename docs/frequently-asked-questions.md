@@ -14,13 +14,17 @@ To be honest, I haven't tested it in IE. No plans to add support for IE since it
 
 ### Why are users required to login?
 
-The diagrams are auto-saved, which requires users to be logged in. Auto-save was a convenience feature requested by many of the initial test users.
+The diagrams are auto-saved to CloudSkew's backend, which requires users to be logged in. Auto-save was a convenience feature requested by many of the initial test users.
 
 Also some upcoming features (checkpoints, restoring from checkpoints etc) will require users to be authenticated.
 
 ## Product roadmap
 
 ### Any plans to auto-generate diagrams from existing infrastructure?
+
+Not in the [near-term future](#planned-features-calendar).
+
+### Any plans to export diagrams as deployable scripts (ARM, CloudFormation, Terraform)?
 
 Not in the [near-term future](#planned-features-calendar).
 

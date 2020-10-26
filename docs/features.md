@@ -7,7 +7,7 @@
 * Icons for Azure, AWS, GCP, Kubernetes/CNCF, Alibaba Cloud, Oracle Cloud (OCI) and more are included in the app.
 * Create a new diagram from a template (or simply create a new empty diagram).
 * Draw arbitrarily large (multi-page) diagrams on an infinite canvas.
-* Print a diagram and/or export it to `.png`, `.jpg` or `.bmp` formats.
+* Print a diagram and/or export it to `.bmp`, `.png`, `.jpg` or `.json` formats.
 * Save a diagram as a reusable template.
 * Document and annotate your diagrams using the built-in document editor.
 * Quick access to resource documentation (developer docs, pricing details and SLAs).

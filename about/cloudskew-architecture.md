@@ -55,7 +55,7 @@ The back-end consists of two web API apps, both authored using ASP.NET Core 3.1:
 
 * The **CloudSkew APIs** facilitates CRUD operations over diagrams, diagram templates and user profiles.
 
-* The **DiagramHelper APIs** are required for printing or exporting (as PNG/JPG) diagrams. These APIs are isolated in a separate app since the memory footprint is higher causing the process to recycle more often.
+* The **DiagramHelper APIs** are required for printing or exporting (as PNG/JPG/JSON) diagrams. These APIs are isolated in a separate app since the memory footprint is higher causing the process to recycle more often.
 
 Using ASP.NET Core's [middleware](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/middleware/?view=aspnetcore-3.1), we ensure that:
 

@@ -17,7 +17,7 @@ features:
 - title: Built-in document editor
   details: With CloudSkew's built-in document editor, you can easily annotate and document your diagrams.
 - title: Share, export, print
-  details: You can share diagrams via links. Or simply export them to PNG or JPG formats. Or just print them.
+  details: You can share diagrams via links. Or simply export them to PNG, JPG or JSON formats. Or just print them.
 footer: 'Copyright: 2019-present - Skewed Ventures Private Limited'
 metaTitle: Free Kubernetes Architecture Diagram Tool | CloudSkew
 meta:

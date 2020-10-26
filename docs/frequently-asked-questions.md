@@ -28,6 +28,10 @@ Not in the [near-term future](#planned-features-calendar).
 
 [Yes, there are plans](#planned-features-calendar).
 
+### Any plans to create a VSCode extension?
+
+Not in the [near-term future](#planned-features-calendar).
+
 ### Any plans to export diagrams as deployable scripts (ARM, CloudFormation, Terraform)?
 
 Not in the [near-term future](#planned-features-calendar).

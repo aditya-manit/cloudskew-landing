@@ -18,23 +18,23 @@ Also some upcoming features (checkpoints, restoring from checkpoints etc) will r
 
 ### Any plans to auto-generate diagrams from existing infrastructure?
 
-Not in the [near-term future](#planned-features-calendar).
+Not in the [near-term future](./features.md#planned-features).
 
 ### Any plans to create an offline (desktop) version of this app?
 
-Not in the [near-term future](#planned-features-calendar).
+Not in the [near-term future](./features.md#planned-features).
 
 ### Any plans to create a team/enterprise version of this app?
 
-[Yes, there are plans](#planned-features-calendar).
+[Yes, there are plans](./features.md#planned-features).
 
 ### Any plans to create a VSCode extension?
 
-Not in the [near-term future](#planned-features-calendar).
+Not in the [near-term future](./features.md#planned-features).
 
 ### Any plans to export diagrams as deployable scripts (ARM, CloudFormation, Terraform)?
 
-Not in the [near-term future](#planned-features-calendar).
+Not in the [near-term future](./features.md#planned-features).
 
 ### Any plans to improve the experience on mobile devices?
 

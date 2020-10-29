@@ -5,6 +5,8 @@ pool:
 
 trigger: none
 
+pr: none
+
 name: cloudskew-landing.production
 
 variables:

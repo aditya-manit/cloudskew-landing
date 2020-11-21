@@ -69,7 +69,7 @@ Separate DTO/REST and DBContext/SQL models are maintained for all entities, with
 
 ## Identity, AuthN & AuthZ
 
-[Auth0](https://auth0.com/) is used as the (OIDC compliant) identity platform for CloudSkew. Users can login via Github or LinkedIn; the handshake with these identity providers is managed by Auth0 itself. Using implicit flow, ID and access tokens (JWTs) are granted to the diagram editor app. The [Auth0.JS SDK](https://auth0.com/docs/libraries/auth0js/v9) makes all this really trivial to implement. All calls to the back-end web APIs use the access token as the bearer.
+[Auth0](https://auth0.com/) is used as the (OIDC compliant) identity platform for CloudSkew. Users can login via Github or LinkedIn; the handshake with these identity providers is managed by Auth0 itself. Using authorization code grant (with PKCE), ID and access tokens (JWTs) are granted to the diagram editor app. [Auth0's Angular SDK](https://github.com/auth0/auth0-angular) makes all this really trivial to implement. All calls to the back-end web APIs use the access token as the bearer.
 
 ![auth0 social connections](https://assets.cloudskew.com/assets/pages/cloudskew-architecture/auth0-social-connections.png)
 

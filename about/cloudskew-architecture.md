@@ -30,7 +30,7 @@ In this document, we'll do a deep-dive on CloudSkew's building blocks while also
 CloudSkew's infrastructure has been built on top of various Azure services - snapped together like lego blocks. Let's now take a look at the individual pieces.
 
 ::: tip
-This article is a part of the #AppliedCloudStoriesContest [(aka.ms/applied-cloud-stories)](https://www.cloudstories.dev) and #AzureDevStories [(http://konf.me/ds)](http://konf.me/ds) initiatives.
+This article is a part of the #FestiveTechCalendar2020 [(https://festivetechcalendar.com/)](https://festivetechcalendar.com/), #AppliedCloudStoriesContest [(aka.ms/applied-cloud-stories)](https://www.cloudstories.dev) and #AzureDevStories [(http://konf.me/ds)](http://konf.me/ds) initiatives.
 :::
 
 ::: tip

@@ -38,7 +38,7 @@
 * A team/enterprise version of this app with the following feature set:
   * Customer managed storage (Organizations will be able to store the diagrams in a location of their choosing: local disk, github, dropbox, google-drive etc).
   * Encryption at rest with customer managed keys.
-  * Login with company credentials.
+  * Login with company credentials (and multi-factor authentication).
   * Collaborative editing with RBAC controls.
 * More icons, shapes and diagram templates. You can always request specific ones [here](https://github.com/cloudskew/cloudskew/issues/new/choose). You can view existing open requests [here](https://github.com/cloudskew/cloudskew/issues?q=is%3Aopen+is%3Aissue+label%3Aicon-request).
 

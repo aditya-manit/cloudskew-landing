@@ -2,6 +2,18 @@
 
 Post-mortems on past incidents
 
+## 2020-11-24
+
+**Symptom** New, first-time CloudSkew users encountered an `unable to fetch diagram` error when they signed up. Workaround was to just refresh the browser (F5) to make the error go away.
+
+**Status**: Resolved :heavy_check_mark:
+
+**Root Cause**: Incident was caused by a race condition where the diagram editor would try to access the new user's profile before it had been created.
+
+**Investigation notes**:
+
+* Would be nice to refactor the user profile resolution code as a [resolve-guard](https://angular.io/api/router/Resolve) for the diagram editor component.
+
 ## 2020-01-28
 
 **Symptom**: Users experienced errors while printing/exporting diagrams containing custom images.

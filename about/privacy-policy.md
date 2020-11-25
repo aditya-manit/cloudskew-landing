@@ -1,5 +1,14 @@
 # Privacy Policy
 
+## Definitions
+
+References in this document to "Skewed Ventures", "CloudSkew", "we", "us" or "our" are references to
+`Skewed Ventures Private Ltd (CIN: U74999KA2017PTC102832)`, a company incorporated in Karnataka,
+India with its registered office at `#175 and #176, Dollars Colony, Phase 4, JP Nagar, Bannerghatta Main Road, Bengaluru 560076, Karnataka, India` and
+operating as `cloudskew.com`.
+
+The terms "you", "your", "user" are references to visitors to our [landing page](https://www.cloudskew.com/) or users of our [online diagram editor](https://app.cloudskew.com/) i.e. our "services".
+
 ## Data Collection, Usage & Retention
 
 When a user interacts with CloudSkew's [landing page](https://www.cloudskew.com/) or [diagram editor](https://app.cloudskew.com/) some information is captured, used & retained as specified below:
@@ -22,7 +31,7 @@ CloudSkew's landing page and diagram editor do not use cookies, tracking pixels,
 
 #### Google Analytics
 
-CloudSkew uses Google Analytics to analyze website traffic and make any necessary product improvements & optimizations. The data collected by Google Analytics may include information about your device, browser, IP address, timezone, referring/exit pages, and timestamps. However, all the data collected is anonymized, PII-free, and retained indefinitely on Google's servers (please refer to [Google Analytics' policies & terms of usage](https://support.google.com/analytics/answer/4597324?hl=en) for more details).
+CloudSkew uses Google Analytics to analyze website traffic and make any necessary product improvements & optimizations. The data collected by Google Analytics may include information about users' device, browser, IP address, timezone, referring/exit pages, and timestamps. However, all the data collected is anonymized, PII-free, and retained indefinitely on Google's servers (please refer to [Google Analytics' policies & terms of usage](https://support.google.com/analytics/answer/4597324?hl=en) for more details).
 
 #### Azure Application Insights
 

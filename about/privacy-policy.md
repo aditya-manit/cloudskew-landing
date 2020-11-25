@@ -2,12 +2,12 @@
 
 ## Definitions
 
-References in this document to "Skewed Ventures", "CloudSkew", "we", "us" or "our" are references to
+In this document, the terms "Skewed Ventures", "CloudSkew", "we", "us" or "our" refer to
 `Skewed Ventures Private Ltd (CIN: U74999KA2017PTC102832)`, a company incorporated in Karnataka,
 India with its registered office at `#175 and #176, Dollars Colony, Phase 4, JP Nagar, Bannerghatta Main Road, Bengaluru 560076, Karnataka, India` and
 operating as `cloudskew.com`.
 
-The terms "you", "your", "user" are references to visitors to our [landing page](https://www.cloudskew.com/) or users of our [online diagram editor](https://app.cloudskew.com/) i.e. our "services".
+The terms "you", "your", "user" refer to visitors to our [landing page](https://www.cloudskew.com/) or users of our [online diagram editor](https://app.cloudskew.com/) i.e. our "services".
 
 ## Data Collection, Usage & Retention
 
@@ -21,7 +21,7 @@ When a user logs in to the CloudSkew diagram editor, the user's email address is
 
 A user's email address is only required for uniquely identifying the user in CloudSkew's system. In the rare event of a catastrophic data loss or data breach, CloudSkew will use these email addresses to notify affected users.
 
-CloudSkew will never send any newsletters or marketing/promotional materials via email. CloudSkew will never share a user's email address with any external party.
+CloudSkew will never send any newsletters or marketing/promotional materials via email. CloudSkew does not share a user's email address with any external party (other than Auth0, which is required to procure said email address).
 
 ### Usage information
 
@@ -41,7 +41,19 @@ For E.g. We're interested in tracking the names of icons that the users couldn't
 
 ### User content
 
-TBD
+This refers to the diagrams and diagram templates created by users logged-in to CloudSkew's diagram editor. CloudSkew securely persists all user created content to its cloud storage.
+
+CloudSkew will never share user created content with any external party.
+
+TBD: Note on analysis, experiments
+
+#### Private user content
+
+By default, all content created by a logged-in user is private and only accessible to that user (unless explicitly shared by the user, see section below).
+
+#### Shared user content
+
+When a user shares a diagram via a link/url, the shared diagram will be visible to any visitor with whom the link/url has been shared. Users have the option of either regenerating the link/url or revoking it entirely (which effectively stops the sharing of the diagram and makes it private).
 
 ## Changes
 

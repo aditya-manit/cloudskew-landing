@@ -8,7 +8,7 @@ Post-mortems on past incidents
 
 **Status**: Resolved :heavy_check_mark:
 
-**Root Cause**: Still investigating. This page will be updated on RCA has been concluded.
+**Root Cause**: Still investigating. This page will be updated once the RCA has been concluded.
 
 **Investigation notes**:
 

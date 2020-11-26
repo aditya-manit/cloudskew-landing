@@ -2,9 +2,21 @@
 
 Post-mortems on past incidents
 
+## 2020-11-26
+
+**Symptom**: CloudSkew users encountered an `unable to fetch user profile` error and were unable to access their content.
+
+**Status**: Resolved :heavy_check_mark:
+
+**Root Cause**: Still investigating. This page will be updated on RCA has been concluded.
+
+**Investigation notes**:
+
+* [Github issue tracking this incident](https://github.com/cloudskew/cloudskew/issues/135).
+
 ## 2020-11-24
 
-**Symptom** New, first-time CloudSkew users encountered an `unable to fetch diagram` error when they signed up. Workaround was to just refresh the browser (F5) to make the error go away.
+**Symptom**: New, first-time CloudSkew users encountered an `unable to fetch diagram` error when they signed up. Workaround was to just refresh the browser (F5) to make the error go away.
 
 **Status**: Resolved :heavy_check_mark:
 

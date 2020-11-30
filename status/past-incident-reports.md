@@ -8,11 +8,12 @@ Post-mortems on past incidents
 
 **Status**: Resolved :heavy_check_mark:
 
-**Root Cause**: Still investigating. This page will be updated once the RCA has been concluded.
+**Root Cause**: The [CloudSkew API](./../about/cloudskew-architecture.md#web-apis) was non-responsive and had to be restarted.
 
 **Investigation notes**:
 
 * [Github issue tracking this incident](https://github.com/cloudskew/cloudskew/issues/136).
+* Unexpectedly, this API outage did not trigger our [automated alerts](./../about/cloudskew-architecture.md#incident-management). This issue now been fixed and the alerts are now triggering normally.
 
 ## 2020-11-24
 

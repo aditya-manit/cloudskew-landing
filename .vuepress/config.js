@@ -49,8 +49,12 @@ module.exports = {
             items: [
               { text: 'Attribution', link: '/about/attribution' },
               { text: `CloudSkew Architecture`, link: '/about/cloudskew-architecture' },
-              { text: 'Privacy Policy', link: '/about/privacy-policy' },
               { text: 'Professional Services', link: '/about/professional-services' },
+            ],
+          },
+          {
+            items: [
+              { text: 'Privacy Policy', link: '/about/privacy-policy' },
             ],
           },
           {

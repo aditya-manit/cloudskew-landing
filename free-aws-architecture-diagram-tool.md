@@ -15,7 +15,7 @@ features:
 - title: Diagram repository
   details: CloudSkew is also your cloud diagram repository. All diagrams are auto-saved to CloudSkew's secure backend.
 - title: Built-in document editor
-  details: With CloudSkew's built-in document editor, you can easily annotate and document your diagrams.
+  details: With CloudSkew's built-in document editor, you can easily annotate and document your diagrams & flowcharts.
 - title: Share, export, print
   details: You can share diagrams via links. Or simply export them to PNG, JPG or JSON formats. Or just print them.
 footer: 'Copyright: 2019-present - Skewed Ventures Private Limited'

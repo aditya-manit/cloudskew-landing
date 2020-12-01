@@ -12,8 +12,8 @@ features:
   details: Icons for AWS, Azure, GCP, Kubernetes, CNCF and more are already available in the app. You don't have to search for & download icons separately.
 - title: It's free
   details: CloudSkew will remain free for individual users. There are plans to add premium features for teams & enterprises in the future.
-- title: Diagram repository
-  details: CloudSkew is also your cloud diagram repository. All diagrams are auto-saved to CloudSkew's secure backend.
+- title: Autosaved to the cloud
+  details: CloudSkew is also your cloud diagram repository. All your diagrams are autosaved to CloudSkew's secure cloud backend.
 - title: Built-in document editor
   details: With CloudSkew's built-in document editor, you can easily annotate and document your diagrams & flowcharts.
 - title: Share, export, print

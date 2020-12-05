@@ -16,8 +16,8 @@ features:
   details: CloudSkew is also your cloud diagram repository. All your diagrams are autosaved to CloudSkew's secure cloud backend.
 - title: Built-in document editor
   details: With CloudSkew's built-in document editor, you can easily annotate and document your diagrams & flowcharts.
-- title: Share, export, print
-  details: You can share diagrams via links. Or simply export them to PNG, JPG or JSON formats. Or just print them.
+- title: Minimal, no frills
+  details: CloudSkew's UI is designed to be clean, simple & minimal. No complicated features, no complex workflows.
 footer: 'Copyright: 2019-present - Skewed Ventures Private Limited'
 metaTitle: Free Kubernetes Architecture Diagram Tool | CloudSkew
 meta:

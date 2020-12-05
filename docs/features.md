@@ -11,7 +11,7 @@
 * Save a diagram as a reusable template.
 * Document and annotate your diagrams using the built-in document editor.
 * Quick access to resource documentation (developer docs, pricing details and SLAs).
-* Share your diagrams with others by generating links (viewer don't have to login).
+* Share your diagrams with others by generating links (viewers don't have to login).
 * Lock an entire diagram or just individual symbols (locking make things read-only, preventing them from being edited or deleted).
 * Adjust visual properties of any symbol via the `visual properties` window.
 * Diagrams are auto-saved.

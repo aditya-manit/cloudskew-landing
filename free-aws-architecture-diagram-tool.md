@@ -10,8 +10,8 @@ features:
   details: CloudSkew is an online diagram & flowchart editor. You don't have to install any software. Just login and start drawing!
 - title: All icons included
   details: Icons for AWS, Azure, GCP, Kubernetes, CNCF and more are already available in the app. You don't have to search for & download the symbols separately.
-- title: It's free
-  details: CloudSkew will remain free for individual users. There are plans to add premium features for teams & enterprises in the future.
+- title: Start for free
+  details: CloudSkew has a free plan for beginners. Upgrade to the professional plan (coming soon) to create unlimited diagrams & templates.
 - title: Autosaved to the cloud
   details: CloudSkew is also your cloud diagram repository. All your diagrams are autosaved to CloudSkew's secure cloud backend.
 - title: Built-in document editor

@@ -17,6 +17,7 @@
         "dtus",
         "failover",
         "grafana",
+        "grandparented",
         "hashi",
         "hostnames",
         "jwts",
@@ -24,6 +25,7 @@
         "keda",
         "kpis",
         "kubernetes",
+        "lucidchart",
         "microservices",
         "mortems",
         "nagar",
@@ -37,6 +39,7 @@
         "roadmap",
         "signup",
         "slas",
+        "visio",
         "vuepress",
         "webhook"
     ],

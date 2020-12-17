@@ -1,5 +1,40 @@
 # Frequently asked questions
 
+## Pricing and subscription plans
+
+### Where can I see my current plan?
+
+Login to the CloudSkew app. Then click on the `my user account` icon on the left-side vertical menu.
+
+### What are the key differences between the FREE and PROFESSIONAL plans?
+
+With the FREE plan, you can only create up to 3 diagrams and diagram templates.
+
+However, with the PROFESSIONAL plan, you can create unlimited diagrams and diagram templates.
+
+A detailed pricing page will be created soon to explain the granular differences between these plans.
+
+### How soon can I subscribe to the PROFESSIONAL plan?
+
+Hopefully from the last week of December 2020 onwards. The payment gateway integration testing is almost done. Also, some documentation details and fit-n-finish bugs are being ironed out.
+
+## Early adopter plan
+
+### Why have I been moved to the EARLY ADOPTER plan?
+
+All early adopters of CloudSkew with more than 3 diagrams (or more than 3 templates) have automatically been grandparented into the EARLY ADOPTER plan. This plan is exactly the same as the PROFESSIONAL plan but free of cost.
+
+However, this plan expires on June 30th, 2021. So for the next six months, you can continue to enjoy all the benefits of the PROFESSIONAL plan for free.
+
+### What happens after my early adopter plan expires?
+
+You'll be automatically moved to the FREE plan. After this, you'll still be able to edit, print, export, share all your existing diagrams. However, you won't be able to create any new ones until you upgrade to the PROFESSIONAL plan.
+
+Some options after your early adopter plan expires on June 30th, 2021:
+
+  1. Upgrade to the PROFESSIONAL plan.
+  2. Export your existing diagrams to another well-known format (say Visio or Lucidchart). Please note that this feature doesn't exist in CloudSkew yet and will be added in the coming months.
+
 ## Product usage
 
 ### Why can't I resize or reorient the diagram canvas?
@@ -12,7 +47,7 @@ Custom diagram sizes and orientations will be enabled in a future release.
 
 The diagrams are auto-saved to CloudSkew's back-end, which requires users to be logged in. Auto-save was a convenience feature requested by many of the initial test users.
 
-Also some upcoming features (checkpoints, restoring from checkpoints etc) will require users to be authenticated.
+Also, some upcoming features (checkpoints, restoring from checkpoints etc) will require users to be authenticated.
 
 ## Product roadmap
 

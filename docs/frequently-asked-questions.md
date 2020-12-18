@@ -14,9 +14,17 @@ However, with the PROFESSIONAL plan, you can create unlimited diagrams and diagr
 
 A detailed pricing page will be created soon to explain the granular differences between these plans.
 
-### How soon can I subscribe to the PROFESSIONAL plan?
+### Why am I being redirected to stripe.com for payments?
 
-Hopefully from the last week of December 2020 onwards. The payment gateway integration testing is almost done. Also, some documentation details and fit-n-finish bugs are being ironed out.
+For simplified billing, CloudSkew has partnered with [Stripe](https://www.stripe.com/), one of the world's leading online payment processors. CloudSkew's billing & customer portals are hosted on stripe.com.
+
+### Why doesn't the billing portal allow me to cancel my subscription?
+
+This feature is being added and will show up in the billing portal in the next couple of sprints. In the meanwhile, please email us at support@cloudskew.com if you need to cancel your active subscription.
+
+### Why doesn't the billing portal support American Express cards?
+
+CloudSkew (Skewed Ventures Private Limited) is based in India. Currently, Stripe restricts the usage of American Express cards for India-based businesses ([details](https://support.stripe.com/questions/american-express-card-support-for-india-based-businesses)).
 
 ## Early adopter plan
 

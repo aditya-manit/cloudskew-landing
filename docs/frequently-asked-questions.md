@@ -26,6 +26,10 @@ This feature is being added and will show up in the billing portal in the next c
 
 CloudSkew (Skewed Ventures Private Limited) is based in India. Currently, Stripe restricts the usage of American Express cards for India-based businesses ([details](https://support.stripe.com/questions/american-express-card-support-for-india-based-businesses)).
 
+### Why can't users in India purchase subscriptions yet?
+
+CloudSkew (Skewed Ventures Private Limited) is based in India. Stripe (our online payment processor) platform has different integrations & rules for payments from domestic (India-based) and international users. That said, support for India-based users is being added and should become available in a couple of sprints.
+
 ## Early adopter plan
 
 ### Why have I been moved to the EARLY ADOPTER plan?

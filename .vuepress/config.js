@@ -55,6 +55,7 @@ module.exports = {
           {
             items: [
               { text: 'Privacy Policy', link: '/about/privacy-policy' },
+              { text: 'Terms of Service', link: '/about/terms-of-service' },
             ],
           },
           {
@@ -96,6 +97,7 @@ function getAboutSidebar() {
         'cloudskew-architecture',
         'privacy-policy',
         'professional-services',
+        'terms-of-service',
       ],
     },
   ]

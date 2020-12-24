@@ -16,7 +16,7 @@ A detailed pricing page will be created soon to explain the granular differences
 
 ### Why am I being redirected to stripe.com for payments?
 
-For simplified billing, CloudSkew has partnered with [Stripe](https://www.stripe.com/), one of the world's leading online payment processors. CloudSkew's billing & customer portals are hosted on stripe.com.
+For simplified & secure billing, CloudSkew has partnered with [Stripe](https://www.stripe.com/), one of the world's leading online payment processors. CloudSkew's billing & customer portals are hosted on stripe.com.
 
 ### Why doesn't the billing portal allow me to cancel my subscription?
 

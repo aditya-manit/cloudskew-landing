@@ -34,6 +34,7 @@ module.exports = {
 
     nav: [
       { text: 'Samples', link: '/docs/samples' },
+      { text: 'Pricing', link: '/docs/pricing' },
       { text: 'Docs', link: '/docs/frequently-asked-questions' },
       // { text: 'Articles', link: '/articles/cross-cutting-concerns-for-cloud-architectures' },
       // { text: 'Case Studies', link: '/case-studies/frequently-asked-questions' },
@@ -124,6 +125,7 @@ function getDocsSidebar() {
         'features',
         'frequently-asked-questions',
         'keyboard-shortcuts',
+        'pricing',
         'samples',
       ],
     },

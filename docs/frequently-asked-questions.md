@@ -6,14 +6,6 @@
 
 Login to the CloudSkew app. Then click on the `my user account` icon on the left-side vertical menu.
 
-### What are the key differences between the FREE and PROFESSIONAL plans?
-
-With the FREE plan, you can only create up to 3 diagrams and diagram templates.
-
-However, with the PROFESSIONAL plan, you can create unlimited diagrams and diagram templates.
-
-A detailed pricing page will be created soon to explain the granular differences between these plans.
-
 ### Why am I being redirected to stripe.com for payments?
 
 For simplified & secure billing, CloudSkew has partnered with [Stripe](https://www.stripe.com/), one of the world's leading online payment processors. CloudSkew's billing & customer portals are hosted on stripe.com.

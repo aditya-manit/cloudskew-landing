@@ -1,7 +1,5 @@
 # Pricing
 
-## Plans
-
 ![pricing table](https://assets.cloudskew.com/assets/pages/pricing/pricing-table-01.png)
 
 <!-- the html, styling is copy/pasted from the 'go to app' button on homepage -->
@@ -28,12 +26,11 @@
   </a>
 </div>
 <br>
-<br>
 
-## Details
-
+::: tip
 With the FREE plan, you can only create up to 3 diagrams and diagram templates.
 
 However, with the PROFESSIONAL plan, you can create unlimited diagrams and diagram templates. Also, you get priority support (24 hr response time for all support requests).
 
 For more details please see our [FAQs](./frequently-asked-questions.md), [terms of service](../about/terms-of-service.md) and [privacy policy](../about/privacy-policy.md).
+:::
